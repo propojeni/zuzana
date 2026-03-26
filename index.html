@@ -305,7 +305,9 @@
       nav.desk { display: none; }
       .menu-btn { display: block; }
       .two-col,.svc-g,.ev-g,.ct-g { grid-template-columns: 1fr; gap: 32px; }
-      .hero-2col { gap: 32px; }
+      .hero-2col { flex-direction: column !important; gap: 32px; }
+      .hero-text-col { order: 1; }
+      .hero-photo-col { order: 2; width: 100%; flex: unset !important; }
       .paths-g { grid-template-columns: 1fr; }
       .appr-g,.ben-g,.grid2 { grid-template-columns: 1fr; }
       .blog-g { grid-template-columns: 1fr; }
