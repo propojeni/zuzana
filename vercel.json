@@ -1,11 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/nejnovejsiverzeweb.html" },
-    { "source": "/uvodni", "destination": "/nejnovejsiverzeweb.html" },
-    { "source": "/o-mne", "destination": "/nejnovejsiverzeweb.html" },
-    { "source": "/online-podpora", "destination": "/nejnovejsiverzeweb.html" },
-    { "source": "/retreaty-akce", "destination": "/nejnovejsiverzeweb.html" },
-    { "source": "/kontakt", "destination": "/nejnovejsiverzeweb.html" },
-    { "source": "/(.*)", "destination": "/nejnovejsiverzeweb.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
