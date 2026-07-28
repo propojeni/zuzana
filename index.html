@@ -841,7 +841,33 @@
     #p-kurz-nervovy-system .ns-about-photo { width:230px; height:230px; border-radius:50%; object-fit:cover; object-position:center top; display:block; position:relative; z-index:1; box-shadow:0 4px 30px rgba(30,26,20,.12); }
     #p-kurz-nervovy-system .ns-about-ring { position:absolute; width:252px; height:252px; border-radius:50%; border:1px solid var(--ns-gold-pale); z-index:0; }
     #p-kurz-nervovy-system .ns-highlight { background:var(--ns-white); border-left:3px solid var(--ns-gold); border-radius:18px; padding:30px; }
-    #p-kurz-nervovy-system .ns-white .ns-highlight { background:var(--ns-cream); }
+    #p-kurz-nervovy-system .ns-white .ns-highlight {
+      background:#F8F2E8;
+      border-left:6px solid var(--ns-gold);
+      border-radius:28px;
+      padding:42px 54px;
+      box-shadow:none;
+    }
+    #p-kurz-nervovy-system .ns-white .ns-highlight p {
+      color:#62584D;
+      font-size:1.08rem;
+      line-height:1.9;
+      margin-bottom:26px;
+    }
+    #p-kurz-nervovy-system .ns-white .ns-highlight p:last-child { margin-bottom:0; }
+    #p-kurz-nervovy-system .ns-white .ns-highlight .ns-good-news {
+      display:block;
+      color:#62584D;
+      font-size:1.08rem;
+      font-weight:500;
+      margin-bottom:8px;
+    }
+    @media(max-width:700px) {
+      #p-kurz-nervovy-system .ns-white .ns-highlight {
+        padding:30px 26px;
+        border-radius:22px;
+      }
+    }
     #p-kurz-nervovy-system .ns-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; list-style:none; margin-top:26px; }
     #p-kurz-nervovy-system .ns-list li { background:var(--ns-white); border:1px solid var(--ns-cream-deep); border-radius:14px; padding:16px 18px; color:var(--ns-text-soft); font-size:.93rem; }
     #p-kurz-nervovy-system .ns-white .ns-list li { background:var(--ns-cream); }
@@ -887,6 +913,95 @@
     #p-kurz-nervovy-system summary { cursor:pointer; color:var(--ns-text); font-weight:500; }
     #p-kurz-nervovy-system details p { margin-top:12px; color:var(--ns-text-soft); }
     @media(max-width:900px){ #p-kurz-nervovy-system .ns-hero, #p-kurz-nervovy-system .ns-two { grid-template-columns:1fr; gap:34px; } #p-kurz-nervovy-system .ns-steps { grid-template-columns:1fr; } #p-kurz-nervovy-system .ns-list { grid-template-columns:1fr; } #p-kurz-nervovy-system .ns-hero { padding-top:56px; } }
+
+    /* ČEKACÍ LISTINA – NERVOVÝ SYSTÉM */
+    #p-kurz-nervovy-system .ns-waitlist-card {
+      position:relative;
+      overflow:hidden;
+      max-width:980px;
+      margin:0 auto;
+      padding:34px 36px;
+      border:2px solid rgba(184,137,42,.5);
+      border-radius:26px;
+      background:linear-gradient(135deg,#FFF9ED 0%,#F4E2BC 48%,#F7EBDD 100%);
+      box-shadow:0 16px 44px rgba(184,137,42,.18);
+      text-align:center;
+      animation:nsWaitlistGlow 3.2s ease-in-out infinite;
+    }
+    #p-kurz-nervovy-system .ns-waitlist-card::before {
+      content:'';
+      position:absolute;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      right:-70px;
+      top:-90px;
+      background:radial-gradient(circle,rgba(184,137,42,.24),transparent 68%);
+      pointer-events:none;
+    }
+    #p-kurz-nervovy-system .ns-waitlist-badge {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:12px;
+      padding:7px 14px;
+      border-radius:999px;
+      background:var(--ns-gold);
+      color:#fff;
+      font-size:.7rem;
+      font-weight:600;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+    #p-kurz-nervovy-system .ns-waitlist-card h2 {
+      position:relative;
+      font-size:clamp(1.7rem,3vw,2.45rem);
+      margin-bottom:12px;
+    }
+    #p-kurz-nervovy-system .ns-waitlist-card p {
+      position:relative;
+      max-width:760px;
+      margin:0 auto 18px;
+      color:var(--ns-text-soft);
+    }
+    #p-kurz-nervovy-system .ns-waitlist-card .ns-btn { position:relative; }
+    #p-kurz-nervovy-system .ns-registration-alert {
+      margin-top:24px;
+      padding:22px 24px;
+      border-radius:18px;
+      background:#2D2D2D;
+      color:#fff;
+      box-shadow:0 10px 28px rgba(30,26,20,.14);
+    }
+    #p-kurz-nervovy-system .ns-registration-alert strong { color:#F0C96A; }
+    #p-kurz-nervovy-system .ns-registration-alert p { color:rgba(255,255,255,.84); margin:0; }
+    #p-kurz-nervovy-system .ns-dates-grid {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:9px;
+      margin-top:12px;
+    }
+    #p-kurz-nervovy-system .ns-date-chip {
+      padding:8px 10px;
+      border-radius:12px;
+      background:var(--ns-cream);
+      color:var(--ns-text);
+      text-align:center;
+      font-size:.84rem;
+      font-weight:500;
+    }
+    @keyframes nsWaitlistGlow {
+      0%,100% { box-shadow:0 16px 44px rgba(184,137,42,.16); transform:translateY(0); }
+      50% { box-shadow:0 20px 54px rgba(184,137,42,.3); transform:translateY(-2px); }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      #p-kurz-nervovy-system .ns-waitlist-card { animation:none; }
+    }
+    @media(max-width:700px) {
+      #p-kurz-nervovy-system .ns-waitlist-card { padding:28px 20px; }
+      #p-kurz-nervovy-system .ns-dates-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+
     /* AKCE */
     .akce-page-hero { padding:112px 0 64px; text-align:center; background:var(--cream); }
     .akce-section { padding:68px 0; }
@@ -1417,7 +1532,7 @@
             <div class="akce-schedule-item"><strong>Středa · Somatická jóga – kurz</strong><span>17:00 · možné i jednorázové lekce<br>Body Studio, Terezie Brzkové 1037/27, Plzeň</span></div>
             <div class="akce-schedule-item"><strong>Středa · Power jóga</strong><span>18:15 · Body Studio<br>Terezie Brzkové 1037/27, Plzeň</span></div>
             <div class="akce-schedule-item"><strong>Čtvrtek do 27. 8. · Jóga v parku Homolka</strong><span>17:45 · Plzeň</span></div>
-            <div class="akce-schedule-item"><strong>Čtvrtek od 24. 9. · Nervový systém – kurz</strong><span>17:15 · SAT NAM<br>Boženy Němcové 3, Plzeň</span></div>
+            <div class="akce-schedule-item"><strong>Čtvrtek od 24. 9. · Nervový systém – kurz</strong><span>17:15 · SAT NAM<br>Jogáza<br>Kollárova 22, Plzeň, 301 00, Plzeň</span></div>
           </div>
           <a class="btn btn-gold" href="https://luma.com/lekce-jogy" target="_blank" rel="noopener">Zobrazit kalendář akcí →</a>
         </article>
@@ -2047,27 +2162,46 @@
   <div class="ns-content">
     <section class="ns-hero">
       <div>
-        <p class="ns-eyebrow">Začátek leden 2027 · Plzeň · kapacita 8 lidí</p>
+        <p class="ns-eyebrow">8 setkání · Plzeň · kapacita 8 lidí</p>
         <h1 class="ns-title">Poznejte svůj <em>nervový systém</em></h1>
         <p class="ns-lead">Vaše cesta ke klidnějšímu já začíná uvnitř.</p>
         <p class="ns-lead">Porozumějte svému nervovému systému a během 8 setkání se naučte, jak s ním spolupracovat ve svůj prospěch. Získejte větší klid, psychickou odolnost a jistotu v tom, co se ve vás děje – i v náročných situacích.</p>
         <p class="ns-lead">Kurz pro všechny, kteří chtějí lépe rozumět svému tělu, stresu, emocím i vlastním reakcím. Bez složité teorie a zbytečného zahlcení – zato srozumitelně, prakticky a s nástroji, které využijete v práci, doma i ve vztazích.</p>
         <div class="ns-actions">
-          <a class="ns-btn" href="#ns-rezervace">Přihlásit se</a>
+          <a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a>
           <a class="ns-btn ns-btn-out" href="#ns-faq">Často kladené otázky</a>
         </div>
       </div>
       <aside class="ns-card">
         <p class="ns-label">Informace o kurzu</p>
         <h2 class="ns-card-title">Nervový systém – kurz</h2>
-        <div class="ns-info-row"><span>Začátek</span><strong>leden 2027</strong></div>
-        <div class="ns-info-row"><span>Místo</span><strong>Plzeň</strong></div>
-        <div class="ns-info-row"><span>Kapacita</span><strong>8 lidí</strong></div>
-        <div class="ns-text" style="margin-top:22px">
-          <p>Kurz probíhá v malé skupině, díky čemuž je dostatek prostoru pro individuální přístup, praktická cvičení i sdílení zkušeností.</p>
-          <p><strong>Přihlášky přijímáme do 31. října 2026.</strong> Následně všem účastníkům zašleme přesné termíny jednotlivých setkání. Termíny budou sestaveny s ohledem na časové možnosti celé skupiny, aby si je každý mohl včas naplánovat.</p>
+        <div class="ns-dates-grid" aria-label="Termíny kurzu">
+          <div class="ns-date-chip">13. 10.</div>
+          <div class="ns-date-chip">20. 10.</div>
+          <div class="ns-date-chip">27. 10.</div>
+          <div class="ns-date-chip">3. 11.</div>
+          <div class="ns-date-chip">10. 11.</div>
+          <div class="ns-date-chip">24. 11.</div>
+          <div class="ns-date-chip">1. 12.</div>
+          <div class="ns-date-chip">8. 12.</div>
         </div>
+        <div class="ns-info-row"><span>Začátek</span><strong>říjen 2027</strong></div>
+        <div class="ns-info-row"><span>Kdy</span><strong>úterky<br>17:20–18:50</strong></div>
+        <div class="ns-info-row"><span>Místo</span><strong>Jogáza<br>Kollárova 22, Plzeň, 301 00</strong></div>
+        <div class="ns-info-row"><span>Kapacita</span><strong>8 lidí</strong></div>
+        <div class="ns-info-row"><span>Termíny</span><strong>13. 10., 20. 10., 27. 10., 3. 11.,<br>10. 11., 24. 11., 1. 12., 8. 12.</strong></div>
+        <div class="ns-info-row"><span>Pomůcky</span><strong>podložky zajištěny</strong></div>
+        <div class="ns-info-row"><span>Navíc</span><strong>materiály, drobné občerstvení</strong></div>
       </aside>
+    </section>
+
+    <section class="ns-section" style="padding-top:12px">
+      <div class="ns-waitlist-card">
+        <span class="ns-waitlist-badge">Registrace se otevře 9. září 2026</span>
+        <h2>Zapište se na čekací listinu</h2>
+        <p>Jakmile se kurz otevře k registracím, pošleme vám e-mail. Budete tak mezi prvními, kdo se dozví o spuštění přihlášek a možnosti získat zvýhodněnou cenu.</p>
+        <a class="ns-btn" href="#ns-rezervace">Chci upozornění e-mailem</a>
+      </div>
     </section>
 
     <section class="ns-section ns-white">
@@ -2076,14 +2210,14 @@
           <p class="ns-label">Možná to znáte</p>
           <h2 class="ns-section-title">Když tělo reaguje dřív než <em>mysl</em></h2>
           <div class="ns-text">
-            <p>Někdy reagujete rychleji, než byste chtěli. Někdy se cítíte unavení, i když se vlastně nic mimořádného nestalo.</p>
-            <p>Někdy vaše tělo reaguje, jako by bylo v ohrožení, zatímco vaše mysl říká: „Vždyť je všechno v pořádku.“</p>
+            <p>Někdy reagujete rychleji, než byste chtěli. Někdy se cítíte unavení, i když se vlastně nic mimořádného nestalo. Někdy vaše tělo reaguje, jako by bylo v ohrožení, zatímco vaše mysl říká: „Vždyť je všechno v pořádku.“</p>
+            <p>Možná taky znáte situace, kdy se cítíte klidní, soustředění a sami sebou. A pak přijdou chvíle, kdy vás zaplaví stres, napětí, úzkost, vztek, zahlcení nebo naopak únava a pocit, že se nemůžete pohnout dál.</p>
             <p>A možná už tušíte, že nejde jen o vůli, disciplínu nebo pozitivní myšlení.</p>
           </div>
         </div>
         <div class="ns-highlight ns-text">
           <p>Velkou roli v tom hraje váš nervový systém – způsob, jakým vnímá bezpečí, napětí, zátěž, prostředí, vztahy i každodenní situace.</p>
-          <p><strong>Dobrá zpráva?</strong><br>Svému nervovému systému můžete začít rozumět. A můžete se naučit s ním spolupracovat.</p>
+          <p><span class="ns-good-news">Dobrá zpráva?</span>Svému nervovému systému můžete začít rozumět. A můžete se naučit s ním spolupracovat.</p>
         </div>
       </div>
     </section>
@@ -2092,8 +2226,6 @@
       <p class="ns-label">Co vás v kurzu čeká</p>
       <h2 class="ns-section-title">Naučíte se rozumět tomu, co se děje ve vašem těle – a <em>vědět, co s tím dělat</em>.</h2>
       <div class="ns-text">
-        <p>Možná znáte situace, kdy se cítíte klidní, soustředění a sami sebou. A pak přijdou chvíle, kdy vás zaplaví stres, napětí, úzkost, vztek, zahlcení nebo naopak únava a pocit, že se nemůžete pohnout dál.</p>
-        <p>V tomto kurzu společně pochopíme, proč se to děje.</p>
         <p>Nebudeme z vás dělat odborníky na neurovědu. Budeme překládat poznatky o těle a mozku do běžného života tak, abyste začali lépe rozumět sami sobě.</p>
         <p>Ukážeme si, jak váš nervový systém ovlivňuje to, co prožíváte, jak přemýšlíte, jak reagujete ve vztazích i jak zvládáte náročné situace. Naučíte se rozpoznávat první signály stresu, lépe vnímat své tělo, porozumět tomu, proč někdy ztrácíte pocit bezpečí, a osvojíte si praktické techniky, které vám pomohou vracet se zpět do většího klidu, stability a kontaktu se sebou.</p>
         <p>Nebudeme hledat univerzální návody ani „tři zaručené tipy“, které fungují každému. Každý nervový systém je jedinečný, a proto budete během kurzu objevovat především to, co funguje právě vám.</p>
@@ -2102,7 +2234,18 @@
         <p><strong>„Vím, co se ve mně právě děje. Rozumím tomu, proč se to děje. A vím, co s tím můžu dělat.“</strong></p>
       </div>
     
-      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Mám zájem</a></div>
+      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
+    </section>
+
+    <section class="ns-section ns-white" style="padding-top:18px;padding-bottom:18px">
+      <div class="ns-inner">
+        <div class="ns-waitlist-card">
+          <span class="ns-waitlist-badge">Pouze 8 míst</span>
+          <h2>Malá skupina, dostatek prostoru</h2>
+          <p>Kurz probíhá v malé skupině, díky čemuž je dostatek prostoru pro individuální přístup, praktická cvičení i sdílení zkušeností.</p>
+          <a class="ns-btn" href="#ns-rezervace">Přidat se na čekací listinu</a>
+        </div>
+      </div>
     </section>
 
     <section class="ns-section ns-white">
@@ -2138,7 +2281,7 @@
         <li>Budeme mluvit o koregulaci, protože nervový systém se ladí i skrze vztahy, hlas, pohled a bezpečný kontakt.</li>
       </ul>
     
-      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Mám zájem</a></div>
+      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
     </section>
 
     <section class="ns-section ns-white">
@@ -2190,7 +2333,7 @@
         <p>Můžeme se učit žít více ze sebe. Autentičtěji. Laskavěji k sobě. S větším klidem. S větší pružností. S větším pocitem bezpečí ve vlastním těle.</p>
       </div>
     
-      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Mám zájem</a></div>
+      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
     </section>
 
     
@@ -2201,15 +2344,18 @@
           <h2 class="ns-section-title">Co si z kurzu skutečně <em>odnesete</em></h2>
           <p class="ns-text" style="margin:0 auto;max-width:720px;color:var(--ns-text-soft)"><strong>Nejen nové informace, ale především schopnost lépe rozumět sobě.</strong></p>
           <p class="ns-text" style="margin:12px auto 0;max-width:760px;color:var(--ns-text-soft)">Kurz je postavený na praktické zkušenosti. Každé setkání propojuje porozumění nervovému systému s konkrétními technikami, které můžete využívat doma, v práci i ve vztazích.</p>
-          <p class="ns-pricing-note"><strong>Počet míst je omezen na 8 účastníků,</strong> aby byl zachován bezpečný prostor a možnost individuálního přístupu.</p>
+          <div class="ns-registration-alert">
+            <p><strong>Registrace probíhá pouze od 9. do 16. září 2026.</strong> Při přihlášení v tomto období je cena celého kurzu 4 000 Kč. Po 16. září bude hlavní registrace uzavřena. Pouze pokud zůstane volné místo, bude možné si je následně rezervovat za standardní cenu 5 000 Kč.</p>
+          </div>
+          <p class="ns-pricing-note"><strong>Kapacita je 8 účastníků,</strong> aby byl zachován bezpečný prostor a možnost individuálního přístupu.</p>
         </div>
         <div class="ns-pricing-cards">
           <div class="ns-pricing-card featured">
-            <div class="ns-featured-badge">Doporučeno</div>
+            <div class="ns-featured-badge">Nejnižší cena</div>
             <p class="ns-pricing-type">Early Bird cena</p>
             <div class="ns-pricing-amount"><span>Kč </span>4 000</div>
             <p class="ns-pricing-sub">za celý kurz · 8 setkání</p>
-            <div class="ns-pricing-deadline">Platí do 31. 8. 2026</div>
+            <div class="ns-pricing-deadline">Registrace 9.–16. 9. 2026</div>
             <ul class="ns-pricing-features">
               <li>8 navazujících setkání</li>
               <li>Praktická práce s nervovým systémem</li>
@@ -2226,7 +2372,7 @@
             <p class="ns-pricing-type">Standardní cena</p>
             <div class="ns-pricing-amount"><span>Kč </span>5 000</div>
             <p class="ns-pricing-sub">za celý kurz · 8 setkání</p>
-            <div class="ns-pricing-deadline" style="background:var(--ns-cream);color:var(--ns-text-muted)">Od 1. 9. 2026</div>
+            <div class="ns-pricing-deadline" style="background:var(--ns-cream);color:var(--ns-text-muted)">Pouze pokud po 16. 9. zůstane volné místo</div>
             <ul class="ns-pricing-features">
               <li>8 navazujících setkání</li>
               <li>Praktická práce s nervovým systémem</li>
@@ -2243,7 +2389,7 @@
             <p class="ns-pricing-type">Jednorázová lekce</p>
             <div class="ns-pricing-amount"><span>Kč </span>625</div>
             <p class="ns-pricing-sub">za jednu 90min lekci</p>
-            <div class="ns-pricing-deadline" style="background:var(--ns-cream);color:var(--ns-text-muted)">Kdykoliv v průběhu kurzu podle dostupnosti</div>
+            <div class="ns-pricing-deadline" style="background:var(--ns-cream);color:var(--ns-text-muted)">Pouze podle aktuální dostupnosti místa</div>
             <ul class="ns-pricing-features">
               <li>Jedna 90min lekce</li>
               <li>Vyzkoušení kurzu bez závazku</li>
@@ -2253,10 +2399,10 @@
               <li>Na základě dostupnosti</li>
               <li>Rezervace předem nutná</li>
             </ul>
-            <div class="ns-card-action"><a class="ns-btn" href="https://joga.rezervace.online/cs/view/kurz-somaticka-joga-r109656/2026-07-07;viewMode=day" target="_blank" rel="noopener">Rezervovat</a></div>
+            <div class="ns-card-action"><a class="ns-btn" href="https://joga.rezervace.online/cs/view/kurz-nervovy-system-r49986/2026-07-07;viewMode=day" target="_blank" rel="noopener">Rezervovat</a></div>
           </div>
         </div>
-        <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Mám zájem</a></div>
+        <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
       </div>
     </section>
 
@@ -2301,17 +2447,17 @@
             <span class="ns-technique-tag">Grounding techniky</span>
           </div>
         </div>
-        <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Mám zájem</a></div>
+        <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
       </div>
     </section>
 
     <section class="ns-section ns-white" id="ns-rezervace">
       <div class="ns-inner">
-        <div class="ns-cta">
-          <p class="ns-label" style="justify-content:center">Přihlaste se do kurzu</p>
-          <h2 class="ns-section-title">Přidáte se?</h2>
-          <p class="ns-text" style="max-width:760px;margin:0 auto 12px;color:var(--ns-text-soft)">Pokud chcete lépe rozumět sobě, svému stresu a svým reakcím, tento kurz je určen právě vám. Ne proto, že je s vámi něco špatně. Ale proto, že si zasloužíte rozumět tomu, jak fungujete.</p>
-          <p class="ns-text" style="max-width:760px;margin:0 auto;color:var(--ns-text-soft)"><strong>Počet míst je omezený.</strong></p>
+        <div class="ns-waitlist-card">
+          <span class="ns-waitlist-badge">Čekací listina je otevřená</span>
+          <h2 class="ns-section-title">Nechte si poslat upozornění</h2>
+          <p>Vyplňte formulář a zapište se na čekací listinu. Jakmile se kurz otevře k registracím, pošleme vám e-mail s informacemi a odkazem k přihlášení.</p>
+          <p><strong>Registrace bude probíhat od 9. do 16. září 2026. Kapacita kurzu je 8 lidí.</strong></p>
         </div>
         <div class="ns-booking">
           <script src="https://se-forms.cz/public/web-forms-v2/subscribe/679801-zes9h11tssf84xjba854cmjcuz8emqzm6gazauchju7i7cbgw5ho96bhrsvww6ahpxpmm4dj9izk4pzceufew52q24ofg2n6gyxo" id="se-webformScriptLoader-679801-zes9h11tssf84xjba854cmjcuz8emqzm6gazauchju7i7cbgw5ho96bhrsvww6ahpxpmm4dj9izk4pzceufew52q24ofg2n6gyxo" async defer></script>
@@ -2330,7 +2476,7 @@
         <details><summary>Co když jsem už absolvoval(a) kurzy osobního rozvoje?</summary><p>I pro vás může být kurz přínosný. Získáte hlubší porozumění tomu, jak funguje váš nervový systém, a díky tomu budete umět jednotlivé techniky využívat vědoměji.</p></details>
         <details><summary>Pomůže mi kurz zbavit se stresu?</summary><p>Stres je přirozenou součástí života a cílem kurzu není ho odstranit. Naučíte se ale lépe rozpoznávat, co se ve vašem těle děje, a získáte nástroje, které vám pomohou reagovat s větším klidem, flexibilitou a nadhledem.</p></details>
         <details><summary>Je kurz vhodný, pokud procházím náročným obdobím?</summary><p>Záleží na vaší aktuální situaci. Kurz není psychoterapií ani nenahrazuje odbornou péči. Pokud procházíte akutní krizí nebo řešíte závažné psychické obtíže, doporučujeme konzultovat vhodnost účasti se svým terapeutem nebo lékařem.</p></details>
-        <details><summary>Kolik času mi kurz zabere?</summary><p>Kurz je navržen tak, aby jej bylo možné zvládat i při práci nebo péči o rodinu. Setkání probíhají ve čtvrtek 17:15–18:45 v termínu 24. 9. – 12. 11. 2026.</p></details>
+        <details><summary>Kolik času mi kurz zabere?</summary><p>Kurz je navržen tak, aby jej bylo možné zvládat i při práci nebo péči o rodinu. Setkání probíhají v úterý od 17:20 do 18:50 v termínech 13. 10., 20. 10., 27. 10., 3. 11., 10. 11., 24. 11., 1. 12. a 8. 12. 2027.</p></details>
         <details><summary>Je kurz vhodný i pro pomáhající profese?</summary><p>Ano. Kurz je přínosný pro psychology, kouče, terapeuty, pedagogy, sociální pracovníky i další pomáhající profese.</p></details>
         <details><summary>Co si z kurzu odnesu?</summary><p>Především větší porozumění sobě. Naučíte se rozpoznávat stavy svého nervového systému, pracovat se stresem a emocemi, vnímat signály svého těla a používat jednoduché techniky pro každodenní situace.</p></details>
       </div>
