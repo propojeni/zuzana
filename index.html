@@ -1002,6 +1002,87 @@
       #p-kurz-nervovy-system .ns-dates-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
 
+
+    /* ODPOČET A KALENDÁŘ – NERVOVÝ SYSTÉM */
+    #p-kurz-nervovy-system .ns-launch-tools {
+      margin-top:24px;
+      padding:24px;
+      border:1px solid rgba(184,137,42,.28);
+      border-radius:22px;
+      background:rgba(254,252,248,.82);
+      box-shadow:0 12px 34px rgba(30,26,20,.06);
+      text-align:center;
+    }
+    #p-kurz-nervovy-system .ns-launch-tools h2 {
+      margin:0 0 16px;
+      font-size:clamp(1.35rem,2.5vw,1.9rem);
+    }
+    #p-kurz-nervovy-system .ns-countdown {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(72px,1fr));
+      gap:10px;
+    }
+    #p-kurz-nervovy-system .ns-countdown-item {
+      padding:14px 8px;
+      border-radius:14px;
+      background:var(--ns-cream);
+    }
+    #p-kurz-nervovy-system .ns-countdown-number {
+      display:block;
+      font-family:'Playfair Display',serif;
+      color:var(--ns-text);
+      font-size:clamp(1.65rem,3.4vw,2.35rem);
+      font-weight:600;
+      line-height:1;
+      font-variant-numeric:tabular-nums;
+    }
+    #p-kurz-nervovy-system .ns-countdown-label {
+      display:block;
+      margin-top:7px;
+      color:var(--ns-text-muted);
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    #p-kurz-nervovy-system .ns-calendar-actions {
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+    #p-kurz-nervovy-system .ns-calendar-btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:11px 18px;
+      border:1px solid var(--ns-gold);
+      border-radius:999px;
+      background:transparent;
+      color:var(--ns-gold);
+      font-family:'Inter',sans-serif;
+      font-size:.8rem;
+      font-weight:500;
+      text-decoration:none;
+      cursor:pointer;
+    }
+    #p-kurz-nervovy-system .ns-calendar-btn-primary {
+      background:var(--ns-gold);
+      color:#fff;
+    }
+    #p-kurz-nervovy-system .ns-countdown-finished {
+      color:var(--ns-gold);
+      font-family:'Playfair Display',serif;
+      font-size:1.5rem;
+      font-weight:600;
+    }
+    @media(max-width:600px) {
+      #p-kurz-nervovy-system .ns-countdown { grid-template-columns:repeat(2,1fr); }
+      #p-kurz-nervovy-system .ns-calendar-actions { flex-direction:column; }
+      #p-kurz-nervovy-system .ns-calendar-btn { width:100%; }
+    }
+
     /* AKCE */
     .akce-page-hero { padding:112px 0 64px; text-align:center; background:var(--cream); }
     .akce-section { padding:68px 0; }
@@ -2171,6 +2252,21 @@
           <a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a>
           <a class="ns-btn ns-btn-out" href="#ns-faq">Často kladené otázky</a>
         </div>
+        <div class="ns-launch-tools" data-ns-launch-tools data-launch="2026-09-09T00:00:00+02:00">
+                    <h2>Do otevření registrací zbývá</h2>
+          <div class="ns-countdown" data-countdown-grid role="timer" aria-label="Odpočet do otevření registrací">
+            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-days>00</strong><span class="ns-countdown-label">dní</span></div>
+            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-hours>00</strong><span class="ns-countdown-label">hodin</span></div>
+            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-minutes>00</strong><span class="ns-countdown-label">minut</span></div>
+            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-seconds>00</strong><span class="ns-countdown-label">sekund</span></div>
+          </div>
+          <p class="ns-countdown-finished" data-countdown-finished hidden>Registrace jsou právě otevřené.</p>
+          <div class="ns-calendar-actions">
+            <a class="ns-calendar-btn ns-calendar-btn-primary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Otev%C5%99en%C3%AD%20registrac%C3%AD%20do%20kurzu%20Nervov%C3%BD%20syst%C3%A9m&amp;dates=20260908T220000Z%2F20260909T215900Z&amp;details=Otev%C3%ADraj%C3%AD%20se%20registrace%20do%20kurzu%20Nervov%C3%BD%20syst%C3%A9m.%20Cena%20pro%20%C4%8Dekac%C3%AD%20listinu%20je%203%20999%20K%C4%8D%20a%20plat%C3%AD%20pouze%209.%20z%C3%A1%C5%99%C3%AD.&amp;location=Online&amp;ctz=Europe%2FPrague" target="_blank" rel="noopener noreferrer">Přidat do Google Kalendáře</a>
+            <button class="ns-calendar-btn" type="button" data-download-ics>Přidat do Apple / Outlook</button>
+          </div>
+        </div>
+
       </div>
       <aside class="ns-card">
         <p class="ns-label">Informace o kurzu</p>
@@ -2463,6 +2559,20 @@
           <p>Od 10. září bude cena 4 999 Kč pro všechny, pokud ještě zůstanou volná místa.</p>
           <p>Vyplňte formulář. Jakmile registraci otevřeme, pošleme vám e-mail jako prvním. Zápis je zdarma a nezávazný.</p>
         </div>
+        <div class="ns-launch-tools" data-ns-launch-tools data-launch="2026-09-09T00:00:00+02:00">
+                    <h2>Nezapomeňte na otevření registrací</h2>
+          <div class="ns-countdown" data-countdown-grid role="timer" aria-label="Odpočet do otevření registrací">
+            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-days>00</strong><span class="ns-countdown-label">dní</span></div>
+            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-hours>00</strong><span class="ns-countdown-label">hodin</span></div>
+            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-minutes>00</strong><span class="ns-countdown-label">minut</span></div>
+            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-seconds>00</strong><span class="ns-countdown-label">sekund</span></div>
+          </div>
+          <p class="ns-countdown-finished" data-countdown-finished hidden>Registrace jsou právě otevřené.</p>
+          <div class="ns-calendar-actions">
+            <a class="ns-calendar-btn ns-calendar-btn-primary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Otev%C5%99en%C3%AD%20registrac%C3%AD%20do%20kurzu%20Nervov%C3%BD%20syst%C3%A9m&amp;dates=20260908T220000Z%2F20260909T215900Z&amp;details=Otev%C3%ADraj%C3%AD%20se%20registrace%20do%20kurzu%20Nervov%C3%BD%20syst%C3%A9m.%20Cena%20pro%20%C4%8Dekac%C3%AD%20listinu%20je%203%20999%20K%C4%8D%20a%20plat%C3%AD%20pouze%209.%20z%C3%A1%C5%99%C3%AD.&amp;location=Online&amp;ctz=Europe%2FPrague" target="_blank" rel="noopener noreferrer">Přidat do Google Kalendáře</a>
+            <button class="ns-calendar-btn" type="button" data-download-ics>Přidat do Apple / Outlook</button>
+          </div>
+        </div>
         <div class="ns-booking">
           <script src="https://se-forms.cz/public/web-forms-v2/subscribe/679801-zes9h11tssf84xjba854cmjcuz8emqzm6gazauchju7i7cbgw5ho96bhrsvww6ahpxpmm4dj9izk4pzceufew52q24ofg2n6gyxo" id="se-webformScriptLoader-679801-zes9h11tssf84xjba854cmjcuz8emqzm6gazauchju7i7cbgw5ho96bhrsvww6ahpxpmm4dj9izk4pzceufew52q24ofg2n6gyxo" async defer></script>
           <noscript><p style="color:var(--ns-text-soft);text-align:center;padding:2rem 0">Pro zobrazení formuláře je potřeba JavaScript.</p></noscript>
@@ -2663,5 +2773,101 @@ showPage(initPage, false);
 })();
 
 </script>
+
+
+
+
+<script id="ns-launch-tools-script">
+(function () {
+  const roots = Array.from(document.querySelectorAll('[data-ns-launch-tools]'));
+  if (!roots.length) return;
+
+  const launchTime = new Date('2026-09-09T00:00:00+02:00').getTime();
+  let timer = null;
+
+  const pad = value => String(value).padStart(2, '0');
+
+  function updateCountdowns() {
+    const remaining = launchTime - Date.now();
+
+    roots.forEach(root => {
+      const grid = root.querySelector('[data-countdown-grid]');
+      const finished = root.querySelector('[data-countdown-finished]');
+      const daysEl = root.querySelector('[data-days]');
+      const hoursEl = root.querySelector('[data-hours]');
+      const minutesEl = root.querySelector('[data-minutes]');
+      const secondsEl = root.querySelector('[data-seconds]');
+
+      if (!grid || !finished || !daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+      if (remaining <= 0) {
+        grid.hidden = true;
+        finished.hidden = false;
+        return;
+      }
+
+      grid.hidden = false;
+      finished.hidden = true;
+      daysEl.textContent = pad(Math.floor(remaining / 86400000));
+      hoursEl.textContent = pad(Math.floor((remaining % 86400000) / 3600000));
+      minutesEl.textContent = pad(Math.floor((remaining % 3600000) / 60000));
+      secondsEl.textContent = pad(Math.floor((remaining % 60000) / 1000));
+    });
+
+    if (remaining <= 0 && timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function downloadCalendarFile() {
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Propojeni//Nervovy system//CS',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      'UID:nervovy-system-registrace-20260909@propojeni',
+      'DTSTAMP:20260803T120000Z',
+      'DTSTART;TZID=Europe/Prague:20260909T000000',
+      'DTEND;TZID=Europe/Prague:20260909T235900',
+      'SUMMARY:Otevření registrací do kurzu Nervový systém',
+      'DESCRIPTION:Otevírají se registrace do kurzu Nervový systém. Cena pro čekací listinu je 3 999 Kč a platí pouze 9. září.',
+      'LOCATION:Online',
+      'BEGIN:VALARM',
+      'TRIGGER:-PT24H',
+      'ACTION:DISPLAY',
+      'DESCRIPTION:Registrace do kurzu Nervový systém se otevřou zítra.',
+      'END:VALARM',
+      'BEGIN:VALARM',
+      'TRIGGER:-PT1H',
+      'ACTION:DISPLAY',
+      'DESCRIPTION:Registrace do kurzu Nervový systém se otevřou za hodinu.',
+      'END:VALARM',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\\r\\n');
+
+    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'otevreni-registraci-nervovy-system.ics';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  document.querySelectorAll('[data-download-ics]').forEach(button => {
+    button.addEventListener('click', downloadCalendarFile);
+  });
+
+  updateCountdowns();
+  timer = window.setInterval(updateCountdowns, 1000);
+})();
+</script>
+
 </body>
 </html>
