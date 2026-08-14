@@ -147,9 +147,7 @@
     .akce-more { margin-left: auto; font-size: .8rem; font-weight: 500; color: var(--gold); text-decoration: none; white-space: nowrap; background: none; border: none; cursor: pointer; font-family: 'Inter', sans-serif; }
     .akce-more:hover { color: var(--gold-dark); }
     .hdiv { border: none; border-top: 1px solid rgba(196,149,58,.15); margin: 0; }
-
-
-    /* FOOTER */
+/* FOOTER */
     footer { background: var(--charcoal); }
     .ft-in { max-width: 1280px; margin: 0 auto; padding: 56px 24px; }
     .ft-g { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 44px; }
@@ -874,7 +872,7 @@
     #p-kurz-nervovy-system .ns-list li::before { content:'—'; color:var(--ns-gold); margin-right:8px; }
     #p-kurz-nervovy-system .ns-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:30px; }
     #p-kurz-nervovy-system .ns-step { background:var(--ns-white); border-top:2px solid var(--ns-gold-pale); border-radius:16px; padding:26px 22px; color:var(--ns-text-soft); }
-    #p-kurz-nervovy-system .ns-step-num { font-family:'Playfair Display',serif; color:var(--ns-gold-pale); font-size:1.8rem; line-height:1; margin-bottom:10px; font-style:italic; }
+    #p-kurz-nervovy-system .ns-step-num { font-family:'Playfair Display',serif; color:var(--ns-gold-pale); font-size:2.2rem; line-height:1; margin-bottom:10px; font-style:italic; }
     #p-kurz-nervovy-system .ns-step h3 { font-size:1.18rem; margin-bottom:8px; }
     #p-kurz-nervovy-system .ns-cta { text-align:center; background:linear-gradient(135deg, rgba(184,137,42,.12), rgba(184,137,42,.04)); border:1px solid rgba(184,137,42,.22); border-radius:28px; padding:48px 34px; }
     
@@ -899,8 +897,7 @@
     #p-kurz-nervovy-system .ns-pricing-amount { font-family:'Playfair Display',serif; font-size:3rem; line-height:1; color:var(--ns-text); margin-bottom:8px; }
     #p-kurz-nervovy-system .ns-pricing-amount span { font-size:1.05rem; }
     #p-kurz-nervovy-system .ns-pricing-sub { color:var(--ns-text-muted); font-size:.86rem; margin-bottom:16px; }
-    #p-kurz-nervovy-system .ns-pricing-deadline { display:block; width:100%; background:var(--ns-gold); color:#fff; font-family:'Playfair Display',serif; font-size:clamp(1.35rem,2.8vw,1.9rem); font-weight:600; line-height:1.15; text-align:center; padding:15px 16px; border-radius:16px; margin:4px 0 20px; box-shadow:0 10px 26px rgba(184,137,42,.22); }
-    #p-kurz-nervovy-system .ns-pricing-deadline-standard { background:var(--ns-text); color:#fff; box-shadow:0 10px 26px rgba(30,26,20,.16); }
+    #p-kurz-nervovy-system .ns-pricing-deadline { display:inline-block; background:var(--ns-gold-pale); color:var(--ns-gold); font-size:.78rem; padding:6px 12px; border-radius:999px; margin-bottom:18px; }
     #p-kurz-nervovy-system .ns-pricing-features { list-style:none; display:flex; flex-direction:column; gap:0; margin-top:8px; }
     #p-kurz-nervovy-system .ns-pricing-features li { color:var(--ns-text-soft); font-size:.88rem; line-height:1.55; padding:9px 0; border-bottom:1px solid var(--ns-cream-mid); display:flex; gap:8px; align-items:flex-start; }
     #p-kurz-nervovy-system .ns-pricing-features li::before { content:'✓'; color:var(--ns-gold); flex-shrink:0; font-weight:600; }
@@ -1004,84 +1001,85 @@
     }
 
 
-    /* ODPOČET A KALENDÁŘ – NERVOVÝ SYSTÉM */
-    #p-kurz-nervovy-system .ns-launch-tools {
-      margin-top:24px;
-      padding:24px;
-      border:1px solid rgba(184,137,42,.28);
-      border-radius:22px;
-      background:rgba(254,252,248,.82);
-      box-shadow:0 12px 34px rgba(30,26,20,.06);
+    /* SURVIO DOTAZNÍK – NERVOVÝ SYSTÉM */
+    #p-kurz-nervovy-system .ns-survey-section {
+      max-width:1100px;
+      margin:0 auto;
+      padding:78px 24px 92px;
+    }
+    #p-kurz-nervovy-system .ns-survey-card {
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      padding:42px 38px;
+      background:linear-gradient(135deg,#FFF9F0 0%,#F3E5CB 48%,#F8EEE3 100%);
+      border:1px solid rgba(184,137,42,.24);
+      box-shadow:0 14px 42px rgba(30,26,20,.08);
+    }
+    #p-kurz-nervovy-system .ns-survey-card::before {
+      content:'';
+      position:absolute;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      right:-90px;
+      top:-110px;
+      background:radial-gradient(circle,rgba(184,137,42,.20),transparent 68%);
+      pointer-events:none;
+    }
+    #p-kurz-nervovy-system .ns-survey-head {
+      position:relative;
+      z-index:1;
+      max-width:760px;
+      margin:0 auto 30px;
       text-align:center;
     }
-    #p-kurz-nervovy-system .ns-launch-tools h2 {
-      margin:0 0 16px;
-      font-size:clamp(1.35rem,2.5vw,1.9rem);
+    #p-kurz-nervovy-system .ns-survey-head h2 {
+      font-size:clamp(1.9rem,3.5vw,2.8rem);
+      margin-bottom:14px;
     }
-    #p-kurz-nervovy-system .ns-countdown {
-      display:grid;
-      grid-template-columns:repeat(4,minmax(72px,1fr));
-      gap:10px;
+    #p-kurz-nervovy-system .ns-survey-head p {
+      color:var(--ns-text-soft);
+      line-height:1.85;
     }
-    #p-kurz-nervovy-system .ns-countdown-item {
-      padding:14px 8px;
-      border-radius:14px;
-      background:var(--ns-cream);
+    #p-kurz-nervovy-system .ns-survey-frame-wrap {
+      position:relative;
+      z-index:1;
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      border:1px solid rgba(30,26,20,.08);
+      box-shadow:0 8px 28px rgba(30,26,20,.06);
     }
-    #p-kurz-nervovy-system .ns-countdown-number {
+    #p-kurz-nervovy-system .ns-survey-frame {
       display:block;
-      font-family:'Playfair Display',serif;
-      color:var(--ns-text);
-      font-size:clamp(1.65rem,3.4vw,2.35rem);
-      font-weight:600;
-      line-height:1;
-      font-variant-numeric:tabular-nums;
+      width:100%;
+      height:980px;
+      border:0;
+      background:#fff;
     }
-    #p-kurz-nervovy-system .ns-countdown-label {
-      display:block;
-      margin-top:7px;
-      color:var(--ns-text-muted);
-      font-size:.72rem;
-      text-transform:uppercase;
-      letter-spacing:.08em;
+    #p-kurz-nervovy-system .ns-survey-fallback {
+      position:relative;
+      z-index:1;
+      text-align:center;
+      margin-top:20px;
     }
-    #p-kurz-nervovy-system .ns-calendar-actions {
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:10px;
+    #p-kurz-nervovy-system .ns-outside-plzen {
       margin-top:18px;
+      padding:18px 20px;
+      border-radius:18px;
+      background:rgba(184,137,42,.10);
+      border:1px solid rgba(184,137,42,.20);
     }
-    #p-kurz-nervovy-system .ns-calendar-btn {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:44px;
-      padding:11px 18px;
-      border:1px solid var(--ns-gold);
-      border-radius:999px;
-      background:transparent;
-      color:var(--ns-gold);
-      font-family:'Inter',sans-serif;
-      font-size:.8rem;
-      font-weight:500;
-      text-decoration:none;
-      cursor:pointer;
+    #p-kurz-nervovy-system .ns-outside-plzen p {
+      margin:0 0 12px;
+      color:var(--ns-text-soft);
+      font-size:.92rem;
     }
-    #p-kurz-nervovy-system .ns-calendar-btn-primary {
-      background:var(--ns-gold);
-      color:#fff;
-    }
-    #p-kurz-nervovy-system .ns-countdown-finished {
-      color:var(--ns-gold);
-      font-family:'Playfair Display',serif;
-      font-size:1.5rem;
-      font-weight:600;
-    }
-    @media(max-width:600px) {
-      #p-kurz-nervovy-system .ns-countdown { grid-template-columns:repeat(2,1fr); }
-      #p-kurz-nervovy-system .ns-calendar-actions { flex-direction:column; }
-      #p-kurz-nervovy-system .ns-calendar-btn { width:100%; }
+    @media(max-width:700px) {
+      #p-kurz-nervovy-system .ns-survey-section { padding:58px 18px 72px; }
+      #p-kurz-nervovy-system .ns-survey-card { padding:30px 18px; border-radius:22px; }
+      #p-kurz-nervovy-system .ns-survey-frame { height:1120px; }
     }
 
     /* AKCE */
@@ -1363,6 +1361,7 @@
 
 </div>
 
+
 <!-- ═══════════ O MNĚ ═══════════ -->
 <div class="page" id="p-about">
 
@@ -1609,53 +1608,36 @@
           <h3>Lekce jógy a kurzy v Plzni</h3>
           <p>Aktuální rozvrh pravidelných lekcí. Konkrétní termíny a dostupnost míst najdete v kalendáři.</p>
           <div class="akce-schedule">
-            <div class="akce-schedule-item"><strong>Pondělí · Power jóga</strong><span>18:00 · AF Studio<br>Měděná 7, Plzeň</span></div>
-            <div class="akce-schedule-item"><strong>Úterý · Power jóga</strong><span>18:30 · AF Studio<br>Měděná 7, Plzeň</span></div>
-            <div class="akce-schedule-item"><strong>Středa · Somatická jóga – kurz</strong><span>17:00 · možné i jednorázové lekce<br>Body Studio, Terezie Brzkové 1037/27, Plzeň</span></div>
-            <div class="akce-schedule-item"><strong>Středa · Power jóga</strong><span>18:15 · Body Studio<br>Terezie Brzkové 1037/27, Plzeň</span></div>
-            <div class="akce-schedule-item"><strong>Čtvrtek do 27. 8. · Jóga v parku Homolka</strong><span>17:45 · Plzeň</span></div>
-            <div class="akce-schedule-item"><strong>Čtvrtek od 24. 9. · Nervový systém – kurz</strong><span>17:15 · SAT NAM<br>Jogáza<br>Kollárova 22, Plzeň, 301 00, Plzeň</span></div>
-          </div>
-          <a class="btn btn-gold" href="https://luma.com/lekce-jogy" target="_blank" rel="noopener">Zobrazit kalendář akcí →</a>
+          <div class="akce-schedule-item"><strong>Pondělí · 18:00</strong><span>Power jóga · AF Studio, Měděná 7, Plzeň</span></div>
+          <div class="akce-schedule-item"><strong>Úterý · 17:20–18:50</strong><span>Kurz nervového systému · Jogáza, Kollárova 22, Plzeň</span></div>
+          <div class="akce-schedule-item"><strong>Středa · 17:00–18:00</strong><span>Somatická jóga · Body Studio, Terezie Brzkové 1037/27, Plzeň</span></div>
+          <div class="akce-schedule-item"><strong>Středa · 18:15</strong><span>Power jóga · Body Studio, Terezie Brzkové 1037/27, Plzeň</span></div>
+          <div class="akce-schedule-item"><strong>Čtvrtek</strong><span>Power jóga · AF Studio, Měděná 7, Plzeň · čas bude upřesněn</span></div>
+        </div>
+          <a class="btn btn-gold" href="https://luma.com/lekce-jogy" target="_blank" rel="noopener">Kalendář akcí a rezervace →</a>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="akce-section bg-white">
-    <div class="wrap">
-      <div class="akce-section-head">
-        <span class="lbl">JEDINEČNÁ SETKÁNÍ</span>
-        <h2>Speciální akce</h2>
-      </div>
-      <div class="akce-grid">
-        <article class="akce-card">
-          <span class="akce-date-badge">24. 7.</span>
-          <h3>Hudební lázeň v lese</h3>
-          <p>Odpočinkové setkání v přírodě, kde se můžete zastavit, ztišit a nechat na sebe působit hudbu i lesní prostředí.</p>
-          <a class="btn btn-gold" href="https://luma.com/iqfm4glk" target="_blank" rel="noopener">Více informací →</a>
-        </article>
-        <article class="akce-card">
-          <span class="akce-date-badge">9. 8.</span>
-          <h3>Jóga na paddle boardech</h3>
-          <p>Jógová praxe na vodě, která propojuje pohyb, rovnováhu, lehkost a letní zážitek.</p>
-          <a class="btn btn-gold" href="https://luma.com/yapn6hpk" target="_blank" rel="noopener">Více informací →</a>
-        </article>
-        <article class="akce-card">
-          <span class="akce-date-badge">16. 8.</span>
-          <h3>Jóga a brunch v Olivce</h3>
-          <p>Příjemné dopoledne s jógou a společným brunchem v klidném prostředí Olivky.</p>
-          <a class="btn btn-gold" href="https://luma.com/vhkxvov8" target="_blank" rel="noopener">Více informací →</a>
-        </article>
-        <article class="akce-card">
-          <span class="akce-date-badge">28. 8.</span>
-          <h3>Kakao a sound healing v lese</h3>
-          <p>Setkání s kakaem, zvukem a přírodou pro hlubší odpočinek a návrat k sobě.</p>
-          <a class="btn btn-gold" href="https://luma.com/ms0z9ur7" target="_blank" rel="noopener">Více informací →</a>
-        </article>
+  
+<section class="akce-section bg-white">
+  <div class="wrap">
+    <div class="akce-section-head">
+      <span class="lbl">Speciální akce</span>
+      <h2>Originální zážitky, které propojují tělo, přírodu, město, kreativitu a společný čas – pokaždé jinak, pokaždé skvěle!❤️</h2>
+      <p>Zažily jsme například hudební lázeň v lese, jógu na paddleboardech, jógu s brunchem nebo kakaovou ceremonii za úplňku... Speciální akce se průběžně mění a každá vzniká trochu jinak. Z každé ale odejdeš s krásným zážitkem.</p>
+    </div>
+    <div class="akce-grid akce-grid-one">
+      <div class="akce-card">
+        <span class="akce-date-badge">Aktuální termíny</span>
+        <h3>Speciální akce</h3>
+        <p>Podívejte se, co chystáme právě teď, a rezervujte si místo na další společný zážitek.</p>
+        <a class="btn btn-gold" href="https://luma.com/zenyvzenu" target="_blank" rel="noopener">Kalendář speciálních akcí a rezervace →</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="akce-section">
     <div class="wrap">
@@ -1853,7 +1835,7 @@
 <!-- ═══════════ SOMATICKÁ JÓGA ═══════════ -->
 <div class="page som-page" id="p-somaticka-joga">
   <div class="som-content">
- NAV  HERO <section style="background: var(--cream);">
+<section style="background: var(--cream);">
 <div class="hero">
 <div class="hero-text">
 <p class="hero-eyebrow">Body Studio Plzeň · Podzim 2026</p>
@@ -2250,22 +2232,13 @@
         <p class="ns-lead">Porozumějte svému nervovému systému a během 8 setkání se naučte, jak s ním spolupracovat ve svůj prospěch. Získejte větší klid, psychickou odolnost a jistotu v tom, co se ve vás děje – i v náročných situacích.</p>
         <p class="ns-lead">Kurz pro všechny, kteří chtějí lépe rozumět svému tělu, stresu, emocím i vlastním reakcím. Bez složité teorie a zbytečného zahlcení – zato srozumitelně, prakticky a s nástroji, které využijete v práci, doma i ve vztazích.</p>
         <div class="ns-actions">
-          <a class="ns-btn" href="#waitlist-form">Zapsat se na čekací listinu</a>
+          <a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a>
           <a class="ns-btn ns-btn-out" href="#ns-faq">Často kladené otázky</a>
         </div>
-        <div class="ns-launch-tools" data-ns-launch-tools data-launch="2026-09-09T00:00:00+02:00">
-                    <h2>Do otevření registrací zbývá</h2>
-          <div class="ns-countdown" data-countdown-grid role="timer" aria-label="Odpočet do otevření registrací">
-            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-days>00</strong><span class="ns-countdown-label">dní</span></div>
-            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-hours>00</strong><span class="ns-countdown-label">hodin</span></div>
-            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-minutes>00</strong><span class="ns-countdown-label">minut</span></div>
-            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-seconds>00</strong><span class="ns-countdown-label">sekund</span></div>
-          </div>
-          <p class="ns-countdown-finished" data-countdown-finished hidden>Registrace jsou právě otevřené.</p>
-          <div class="ns-calendar-actions">
-            <a class="ns-calendar-btn ns-calendar-btn-primary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Otev%C5%99en%C3%AD%20registrac%C3%AD%20do%20kurzu%20Nervov%C3%BD%20syst%C3%A9m&amp;dates=20260908T220000Z%2F20260909T215900Z&amp;details=Otev%C3%ADraj%C3%AD%20se%20registrace%20do%20kurzu%20Nervov%C3%BD%20syst%C3%A9m.%20Cena%20pro%20%C4%8Dekac%C3%AD%20listinu%20je%203%20999%20K%C4%8D%20a%20plat%C3%AD%20pouze%209.%20z%C3%A1%C5%99%C3%AD.&amp;location=Online&amp;ctz=Europe%2FPrague" target="_blank" rel="noopener noreferrer">Přidat do Google Kalendáře</a></div>
+        <div class="ns-outside-plzen">
+          <p><strong>Nejste z Plzně a přesto vás téma zajímá?</strong></p>
+          <a class="ns-btn ns-btn-out" href="#ns-dotaznik">Klikněte prosím sem ↓</a>
         </div>
-
       </div>
       <aside class="ns-card">
         <p class="ns-label">Informace o kurzu</p>
@@ -2280,7 +2253,7 @@
           <div class="ns-date-chip">1. 12.</div>
           <div class="ns-date-chip">8. 12.</div>
         </div>
-        <div class="ns-info-row"><span>Začátek</span><strong>říjen 2026</strong></div>
+        <div class="ns-info-row"><span>Začátek</span><strong>říjen 2027</strong></div>
         <div class="ns-info-row"><span>Kdy</span><strong>úterky<br>17:20–18:50</strong></div>
         <div class="ns-info-row"><span>Místo</span><strong>Jogáza<br>Kollárova 22, Plzeň, 301 00</strong></div>
         <div class="ns-info-row"><span>Kapacita</span><strong>8 lidí</strong></div>
@@ -2290,6 +2263,16 @@
       </aside>
     </section>
 
+    <section class="ns-section" style="padding-top:12px">
+      <div class="ns-waitlist-card">
+        <span class="ns-waitlist-badge">Přednostní registrace</span>
+        <h2>Proč se zapsat na čekací listinu?</h2>
+        <p>Kurz má kapacitu pouze 8 účastníků. Členové čekací listiny se o otevření registrace dozvědí jako první.</p>
+        <p><strong>Pouze 9. září získají možnost přihlásit se za 3 999 Kč.</strong></p>
+        <p>Od 10. září bude cena pro všechny 4 999 Kč — pouze pokud po přednostní registraci ještě zůstanou volná místa.</p>
+        <a class="ns-btn" href="#ns-rezervace">Chci cenu 3 999 Kč</a>
+      </div>
+    </section>
 
     <section class="ns-section ns-white">
       <div class="ns-inner ns-two">
@@ -2308,17 +2291,6 @@
         </div>
       </div>
     </section>
-    <section class="ns-section" style="padding-top:12px">
-      <div class="ns-waitlist-card">
-        <span class="ns-waitlist-badge">Přednostní registrace</span>
-        <h2>Proč se zapsat na čekací listinu?</h2>
-        <p>Kurz má kapacitu pouze 8 účastníků. Členové čekací listiny se o otevření registrace dozvědí jako první.</p>
-        <p><strong>Pouze 9. září získají možnost přihlásit se za 3 999 Kč.</strong></p>
-        <p>Od 10. září bude cena pro všechny 4 999 Kč — pouze pokud po přednostní registraci ještě zůstanou volná místa.</p>
-        <a class="ns-btn" href="#waitlist-form">Chci cenu 3 999 Kč</a>
-      </div>
-    </section>
-
 
     <section class="ns-section">
       <p class="ns-label">Co vás v kurzu čeká</p>
@@ -2332,7 +2304,7 @@
         <p><strong>„Vím, co se ve mně právě děje. Rozumím tomu, proč se to děje. A vím, co s tím můžu dělat.“</strong></p>
       </div>
     
-      <div class="ns-mini-cta"><a class="ns-btn" href="#waitlist-form">Zapsat se na čekací listinu</a></div>
+      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
     </section>
 
     <section class="ns-section ns-white" style="padding-top:18px;padding-bottom:18px">
@@ -2342,7 +2314,7 @@
           <h2>Čekací listina má přednost</h2>
           <p>Členové čekací listiny se mohou přihlásit 9. září za <strong>3 999 Kč</strong>.</p>
           <p>Od 10. září bude cena pro všechny <strong>4 999 Kč</strong>. Vzhledem k malé kapacitě už ale nemusí zbýt volné místo.</p>
-          <a class="ns-btn" href="#waitlist-form">Chci být mezi prvními</a>
+          <a class="ns-btn" href="#ns-rezervace">Chci být mezi prvními</a>
         </div>
       </div>
     </section>
@@ -2380,7 +2352,7 @@
         <li>Budeme mluvit o koregulaci, protože nervový systém se ladí i skrze vztahy, hlas, pohled a bezpečný kontakt.</li>
       </ul>
     
-      <div class="ns-mini-cta"><a class="ns-btn" href="#waitlist-form">Zapsat se na čekací listinu</a></div>
+      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
     </section>
 
     <section class="ns-section ns-white">
@@ -2400,7 +2372,28 @@
       </div>
     </section>
 
+    <section class="ns-section">
+      <p class="ns-label">S čím budete odcházet</p>
+      <h2 class="ns-section-title">S větším respektem ke svému tělu a <em>větší jistotou</em></h2>
+      <div class="ns-steps">
+        <div class="ns-step"><div class="ns-step-num">01</div><h3>Větší porozumění</h3><p>Budete umět začít (lépe) vnímat, co se ve vás děje, a umět pojmenovat první signály přetížení, se kterými budete dále pracovat.</p></div>
+        <div class="ns-step"><div class="ns-step-num">02</div><h3>Konkrétní nástroje</h3><p>Odnesete si praktické postupy pro práci se stresem a napětím.</p></div>
+        <div class="ns-step"><div class="ns-step-num">03</div><h3>Méně boje se sebou</h3><p>Pochopíte, že vaše reakce dávají smysl. A že se sebou můžete začít spolupracovat.</p></div>
+      </div>
+    </section>
 
+    <section class="ns-section ns-white">
+      <div class="ns-inner ns-two">
+        <div>
+          <p class="ns-label">Tento kurz není terapie</p>
+          <h2 class="ns-section-title">Vzdělávací a sebezkušenostní <em>prostor</em></h2>
+        </div>
+        <div class="ns-text">
+          <p>Kurz nenahrazuje psychoterapii, lékařskou péči ani krizovou pomoc.</p>
+          <p>Pokud procházíte akutní krizí nebo výraznými psychickými obtížemi, doporučujeme zvážit účast s ohledem na vaši aktuální situaci a případně ji kombinovat s podporou kvalifikovaného odborníka.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="ns-section">
       <p class="ns-label">Proč přijít</p>
@@ -2411,7 +2404,7 @@
         <p>Můžeme se učit žít více ze sebe. Autentičtěji. Laskavěji k sobě. S větším klidem. S větší pružností. S větším pocitem bezpečí ve vlastním těle.</p>
       </div>
     
-      <div class="ns-mini-cta"><a class="ns-btn" href="#waitlist-form">Zapsat se na čekací listinu</a></div>
+      <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
     </section>
 
     
@@ -2422,16 +2415,20 @@
           <h2 class="ns-section-title">Co si z kurzu skutečně <em>odnesete</em></h2>
           <p class="ns-text" style="margin:0 auto;max-width:720px;color:var(--ns-text-soft)"><strong>Nejen nové informace, ale především schopnost lépe rozumět sobě.</strong></p>
           <p class="ns-text" style="margin:12px auto 0;max-width:760px;color:var(--ns-text-soft)">Kurz je postavený na praktické zkušenosti. Každé setkání propojuje porozumění nervovému systému s konkrétními technikami, které můžete využívat doma, v práci i ve vztazích.</p>
+          <div class="ns-registration-alert">
+            <p><strong>Čekací listina:</strong> pouze 9. září cena 3 999 Kč.</p>
+            <p style="margin-top:10px"><strong>Od 10. září:</strong> cena 4 999 Kč pro všechny — pouze pokud ještě zůstanou volná místa.</p>
+          </div>
           <p class="ns-pricing-note"><strong>Kapacita je 8 účastníků,</strong> aby byl zachován bezpečný prostor a možnost individuálního přístupu.</p>
         </div>
         <div class="ns-pricing-cards">
           <div class="ns-pricing-card featured">
             <div class="ns-featured-badge">Nejnižší cena</div>
-            <p class="ns-pricing-type">Cena 9. září</p>
+            <p class="ns-pricing-type">Čekací listina</p>
             <div class="ns-pricing-amount"><span>Kč </span>3 999</div>
             <p class="ns-pricing-sub">za celý kurz · 8 setkání</p>
             <div class="ns-pricing-deadline">Pouze 9. 9. 2026</div>
-            <p class="ns-text" style="font-size:.88rem;margin-bottom:14px;color:var(--ns-text-soft)">Zvýhodněná cena platná pouze během 9. září 2026.</p>
+            <p class="ns-text" style="font-size:.88rem;margin-bottom:14px;color:var(--ns-text-soft)">Pouze pro členy čekací listiny. Přednostní registrace a největší šance získat místo.</p>
             <ul class="ns-pricing-features">
               <li>8 navazujících setkání</li>
               <li>Praktická práce s nervovým systémem</li>
@@ -2447,8 +2444,8 @@
             <p class="ns-pricing-type">Standardní cena</p>
             <div class="ns-pricing-amount"><span>Kč </span>4 999</div>
             <p class="ns-pricing-sub">za celý kurz · 8 setkání</p>
-            <div class="ns-pricing-deadline ns-pricing-deadline-standard">Od 10. 9. 2026</div>
-            <p class="ns-text" style="font-size:.88rem;margin-bottom:14px;color:var(--ns-text-soft)">Cena platná od 10. září 2026, pokud budou ještě volná místa.</p>
+            <div class="ns-pricing-deadline" style="background:var(--ns-cream);color:var(--ns-text-muted)">Od 10. 9. 2026</div>
+            <p class="ns-text" style="font-size:.88rem;margin-bottom:14px;color:var(--ns-text-soft)">Pro všechny zájemce, pouze pokud po přednostní registraci ještě zůstanou volná místa.</p>
             <ul class="ns-pricing-features">
               <li>8 navazujících setkání</li>
               <li>Praktická práce s nervovým systémem</li>
@@ -2476,7 +2473,7 @@
             </div>
           </div>
         </div>
-        <div class="ns-mini-cta"><a class="ns-btn" href="#waitlist-form">Zapsat se na čekací listinu</a></div>
+        <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
       </div>
     </section>
 
@@ -2502,7 +2499,12 @@
             <div>Certifikovaná v polyvagálním přístupu k nervovému systému</div>
             <div>Propojuji terapeutické, mindfulness a tělesné přístupy</div>
           </div>
-        </div>
+        
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px">
+            <a class="ns-btn ns-btn-out" href="mailto:propojeni.zuzana@gmail.com">propojeni.zuzana@gmail.com</a>
+            <a class="ns-btn ns-btn-out" href="https://www.instagram.com/_propojeni_/" target="_blank" rel="noopener">Instagram @_propojeni_</a>
+          </div>
+</div>
         <div class="ns-about-card">
           <p class="ns-label">Techniky a přístupy</p>
           <p class="ns-text">V kurzu kombinuji poznatky o nervovém systému s jemnými, praktickými a zkušenostními nástroji.</p>
@@ -2521,7 +2523,7 @@
             <span class="ns-technique-tag">Grounding techniky</span>
           </div>
         </div>
-        <div class="ns-mini-cta"><a class="ns-btn" href="#waitlist-form">Zapsat se na čekací listinu</a></div>
+        <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
       </div>
     </section>
 
@@ -2534,19 +2536,7 @@
           <p>Od 10. září bude cena 4 999 Kč pro všechny, pokud ještě zůstanou volná místa.</p>
           <p>Vyplňte formulář. Jakmile registraci otevřeme, pošleme vám e-mail jako prvním. Zápis je zdarma a nezávazný.</p>
         </div>
-        <div class="ns-launch-tools" data-ns-launch-tools data-launch="2026-09-09T00:00:00+02:00">
-                    <h2>Nezapomeňte na otevření registrací</h2>
-          <div class="ns-countdown" data-countdown-grid role="timer" aria-label="Odpočet do otevření registrací">
-            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-days>00</strong><span class="ns-countdown-label">dní</span></div>
-            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-hours>00</strong><span class="ns-countdown-label">hodin</span></div>
-            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-minutes>00</strong><span class="ns-countdown-label">minut</span></div>
-            <div class="ns-countdown-item"><strong class="ns-countdown-number" data-seconds>00</strong><span class="ns-countdown-label">sekund</span></div>
-          </div>
-          <p class="ns-countdown-finished" data-countdown-finished hidden>Registrace jsou právě otevřené.</p>
-          <div class="ns-calendar-actions">
-            <a class="ns-calendar-btn ns-calendar-btn-primary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Otev%C5%99en%C3%AD%20registrac%C3%AD%20do%20kurzu%20Nervov%C3%BD%20syst%C3%A9m&amp;dates=20260908T220000Z%2F20260909T215900Z&amp;details=Otev%C3%ADraj%C3%AD%20se%20registrace%20do%20kurzu%20Nervov%C3%BD%20syst%C3%A9m.%20Cena%20pro%20%C4%8Dekac%C3%AD%20listinu%20je%203%20999%20K%C4%8D%20a%20plat%C3%AD%20pouze%209.%20z%C3%A1%C5%99%C3%AD.&amp;location=Online&amp;ctz=Europe%2FPrague" target="_blank" rel="noopener noreferrer">Přidat do Google Kalendáře</a></div>
-        </div>
-        <div class="ns-booking" id="waitlist-form">
+        <div class="ns-booking">
           <script src="https://se-forms.cz/public/web-forms-v2/subscribe/679801-zes9h11tssf84xjba854cmjcuz8emqzm6gazauchju7i7cbgw5ho96bhrsvww6ahpxpmm4dj9izk4pzceufew52q24ofg2n6gyxo" id="se-webformScriptLoader-679801-zes9h11tssf84xjba854cmjcuz8emqzm6gazauchju7i7cbgw5ho96bhrsvww6ahpxpmm4dj9izk4pzceufew52q24ofg2n6gyxo" async defer></script>
           <noscript><p style="color:var(--ns-text-soft);text-align:center;padding:2rem 0">Pro zobrazení formuláře je potřeba JavaScript.</p></noscript>
         </div>
@@ -2569,6 +2559,32 @@
       </div>
     </section>
   </div>
+
+    <section class="ns-survey-section" id="ns-dotaznik">
+      <div class="ns-survey-card">
+        <div class="ns-survey-head">
+          <p class="ns-label" style="justify-content:center">Nejste z Plzně?</p>
+          <h2>Zajímá vás téma nervového systému i mimo Plzeň?</h2>
+          <p>Vyplňte krátký dotazník. Pomůže mi zjistit, kde a v jaké podobě je o podobný kurz zájem.</p>
+        </div>
+
+        <div class="ns-survey-frame-wrap">
+          <iframe
+            class="ns-survey-frame"
+            src="https://www.survio.com/survey/d/M2H4L7S1K4E5E0W1B"
+            title="Dotazník – kurz nervového systému"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+
+        <div class="ns-survey-fallback">
+          <p style="color:var(--ns-text-soft);margin-bottom:12px">Pokud se dotazník nezobrazí přímo na stránce, můžete ho otevřít samostatně.</p>
+          <a class="ns-btn" href="https://www.survio.com/survey/d/M2H4L7S1K4E5E0W1B" target="_blank" rel="noopener">Otevřít dotazník →</a>
+        </div>
+      </div>
+    </section>
+
 </div>
 
 
@@ -2579,7 +2595,7 @@
 
 
 <footer>
-  <div class="ft-g wrap" style="padding:64px 24px 40px">
+<div class="ft-g wrap" style="padding:64px 24px 40px">
     <div>
       <a class="logo" href="#" data-nav="home" style="color:#fff;display:block;margin-bottom:16px">Zuzana D.</a>
       <p style="font-size:.84rem;color:rgba(253,248,243,.55);max-width:260px;line-height:1.7">Pomáhám ženám pochopit svůj nervový systém a žít život v klidu a rovnováze, a tím najít cestu zpět k sobě.</p>
@@ -2746,134 +2762,5 @@ showPage(initPage, false);
 })();
 
 </script>
-
-
-
-
-<script id="ns-launch-tools-script">
-(function () {
-  const roots = Array.from(document.querySelectorAll('[data-ns-launch-tools]'));
-  if (!roots.length) return;
-
-  const launchTime = new Date('2026-09-09T00:00:00+02:00').getTime();
-  let timer = null;
-
-  const pad = value => String(value).padStart(2, '0');
-
-  function updateCountdowns() {
-    const remaining = launchTime - Date.now();
-
-    roots.forEach(root => {
-      const grid = root.querySelector('[data-countdown-grid]');
-      const finished = root.querySelector('[data-countdown-finished]');
-      const daysEl = root.querySelector('[data-days]');
-      const hoursEl = root.querySelector('[data-hours]');
-      const minutesEl = root.querySelector('[data-minutes]');
-      const secondsEl = root.querySelector('[data-seconds]');
-
-      if (!grid || !finished || !daysEl || !hoursEl || !minutesEl || !secondsEl) return;
-
-      if (remaining <= 0) {
-        grid.hidden = true;
-        finished.hidden = false;
-        return;
-      }
-
-      grid.hidden = false;
-      finished.hidden = true;
-      daysEl.textContent = pad(Math.floor(remaining / 86400000));
-      hoursEl.textContent = pad(Math.floor((remaining % 86400000) / 3600000));
-      minutesEl.textContent = pad(Math.floor((remaining % 3600000) / 60000));
-      secondsEl.textContent = pad(Math.floor((remaining % 60000) / 1000));
-    });
-
-    if (remaining <= 0 && timer) {
-      clearInterval(timer);
-      timer = null;
-    }
-  }
-
-  function downloadCalendarFile() {
-    const ics = [
-      'BEGIN:VCALENDAR',
-      'VERSION:2.0',
-      'PRODID:-//Propojeni//Nervovy system//CS',
-      'CALSCALE:GREGORIAN',
-      'METHOD:PUBLISH',
-      'BEGIN:VEVENT',
-      'UID:nervovy-system-registrace-20260909@propojeni',
-      'DTSTAMP:20260803T120000Z',
-      'DTSTART;TZID=Europe/Prague:20260909T000000',
-      'DTEND;TZID=Europe/Prague:20260909T235900',
-      'SUMMARY:Otevření registrací do kurzu Nervový systém',
-      'DESCRIPTION:Otevírají se registrace do kurzu Nervový systém. Cena pro čekací listinu je 3 999 Kč a platí pouze 9. září.',
-      'LOCATION:Online',
-      'BEGIN:VALARM',
-      'TRIGGER:-PT24H',
-      'ACTION:DISPLAY',
-      'DESCRIPTION:Registrace do kurzu Nervový systém se otevřou zítra.',
-      'END:VALARM',
-      'BEGIN:VALARM',
-      'TRIGGER:-PT1H',
-      'ACTION:DISPLAY',
-      'DESCRIPTION:Registrace do kurzu Nervový systém se otevřou za hodinu.',
-      'END:VALARM',
-      'END:VEVENT',
-      'END:VCALENDAR'
-    ].join('\\r\\n');
-
-    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'otevreni-registraci-nervovy-system.ics';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
-  }
-
-  document.querySelectorAll('[data-download-ics]').forEach(button => {
-    button.addEventListener('click', downloadCalendarFile);
-  });
-
-  updateCountdowns();
-  timer = window.setInterval(updateCountdowns, 1000);
-})();
-</script>
-
-
-
-
-
-<script id="cta-scroll-script">
-(function () {
-  function getFormTarget() {
-    const wrapper = document.getElementById('waitlist-form');
-    if (!wrapper) return null;
-    return wrapper.querySelector('iframe, form, .se-webform, .se-webform-wrapper, .se-webform-container') || wrapper;
-  }
-
-  function scrollToSmartEmailingForm() {
-    const target = getFormTarget();
-    if (!target) return;
-    const headerOffset = 84;
-    const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-  }
-
-  document.addEventListener('click', function (event) {
-    const trigger = event.target.closest('a[href="#waitlist-form"], [data-scroll-form]');
-    if (!trigger) return;
-    event.preventDefault();
-
-    // SmartEmailing is injected asynchronously. Scroll once immediately and once after it loads.
-    scrollToSmartEmailingForm();
-    window.setTimeout(scrollToSmartEmailingForm, 350);
-    window.setTimeout(scrollToSmartEmailingForm, 900);
-  });
-})();
-</script>
-
 </body>
 </html>
