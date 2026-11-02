@@ -1204,7 +1204,27 @@
       #p-about .about-img img { width:min(290px,100%); object-position:50% 18%; }
     }
 
-  </style>
+  
+/* Tři běhy kurzu Nervový systém – výpis termínů */
+#p-kurz-nervovy-system .ns-term-runs{display:grid;gap:12px;margin:22px 0}
+#p-kurz-nervovy-system .ns-term-run{border:1px solid rgba(184,137,42,.24);border-radius:18px;padding:18px 20px;background:#fffaf2}
+#p-kurz-nervovy-system .ns-term-run h3{font-size:1.13rem;margin:0 0 6px;color:#333}
+#p-kurz-nervovy-system .ns-term-run p{margin:0 0 14px;font-size:.9rem;color:#71685e}
+#p-kurz-nervovy-system .ns-term-dates{display:flex;flex-wrap:wrap;gap:7px}
+#p-kurz-nervovy-system .ns-term-dates span{padding:6px 10px;border-radius:10px;background:#f0e4d0;color:#6a4e25;font-size:.87rem}
+</style>
+
+<style id="sumperk-updates">
+#p-akce .akce-schedule-item a{display:inline-block;margin-top:10px;color:#a67b29;font-weight:650;text-decoration:underline;text-underline-offset:4px}
+#p-akce .akce-coming-soon{text-align:center;background:linear-gradient(135deg,#f9f2e8,#fffaf4);border:1px solid #e9d8bb;padding:38px}
+#p-akce .akce-coming-soon h3{letter-spacing:.12em;color:#b28a39}
+#p-somaticka-joga .som-schedule-note{margin:15px 0 0;color:#9e762d;font-weight:600;text-align:center}
+#p-somaticka-joga .pricing-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+#p-kurz-nervovy-system .ns-booking{background:linear-gradient(135deg,#fff9f1,#f6ead8);border:1px solid #e8d7b8;border-radius:26px;padding:28px;box-shadow:0 12px 28px rgba(75,55,31,.06)}
+#p-kurz-nervovy-system .ns-booking input,#p-kurz-nervovy-system .ns-booking select,#p-kurz-nervovy-system .ns-booking textarea{border-radius:12px!important;border-color:#dfcba8!important;background:#fffdfa!important}
+#p-kurz-nervovy-system .ns-booking button,#p-kurz-nervovy-system .ns-booking input[type=submit]{background:#b58b3d!important;color:white!important;border:0!important;border-radius:999px!important}
+@media(max-width:650px){#p-somaticka-joga .pricing-cards{grid-template-columns:1fr}#p-kurz-nervovy-system .ns-booking{padding:16px}}
+</style>
 </head>
 <body>
 
@@ -1611,17 +1631,13 @@
       <div class="akce-grid akce-grid-one">
         <article class="akce-card">
           <span class="akce-date-badge">Pravidelný program</span>
-          <h3>Lekce jógy a kurzy v Plzni</h3>
+          <h3>Pravidelné lekce jógy v Šumperku</h3>
           <p>Aktuální rozvrh pravidelných lekcí. Konkrétní termíny a dostupnost míst najdete v kalendáři.</p>
           <div class="akce-schedule">
-          <div class="akce-schedule-item"><strong>Úterý · 18:00</strong><span>Power jóga · AF Studio, Měděná 7, Plzeň</span></div>
-          <div class="akce-schedule-item"><strong>Úterý · 17:20–18:50</strong><span>Kurz nervového systému · Jogáza, Kollárova 22, Plzeň</span></div>
-          <div class="akce-schedule-item"><strong>Středa · 17:00–18:00</strong><span>Somatická jóga · Body Studio, Terezie Brzkové 1037/27, Plzeň</span></div>
-          <div class="akce-schedule-item"><strong>Středa · 18:15</strong><span>Power jóga · Body Studio, Terezie Brzkové 1037/27, Plzeň</span></div>
-          
-        </div>
-          <a class="btn btn-gold" href="https://luma.com/lekce-jogy" target="_blank" rel="noopener">Kalendář akcí a rezervace →</a>
-        </article>
+<div class="akce-schedule-item"><strong>Čtvrtek · 18:15–19:15</strong><span>Power jóga · GYM SVĚT<br>Slovanská 275/16, 787 01 Šumperk<br><a href="https://gymify.cz/gyms/gym-svet/booking?event_calendar=516" target="_blank" rel="noopener noreferrer">Rezervovat lekci →</a></span></div>
+<div class="akce-schedule-item"><strong>Neděle · 17:00–18:00</strong><span>Somatická jóga · NA SVĚTĚ<br>Slovanská 275/16, 787 01 Šumperk<br><a href="https://joga.rezervace.online/cs/terms/" target="_blank" rel="noopener noreferrer">Rezervovat lekci →</a></span></div>
+</div>
+</article>
       </div>
     </div>
   </section>
@@ -1635,12 +1651,7 @@
       <p>Zažily jsme například hudební lázeň v lese, jógu na paddleboardech, jógu s brunchem nebo kakaovou ceremonii za úplňku... Speciální akce se průběžně mění a každá vzniká trochu jinak. Z každé ale odejdeš s krásným zážitkem.</p>
     </div>
     <div class="akce-grid akce-grid-one">
-      <div class="akce-card">
-        <span class="akce-date-badge">Aktuální termíny</span>
-        <h3>Speciální akce</h3>
-        <p>Podívejte se, co chystáme právě teď, a rezervujte si místo na další společný zážitek.</p>
-        <a class="btn btn-gold" href="https://luma.com/zenyvzenu" target="_blank" rel="noopener">Kalendář speciálních akcí a rezervace →</a>
-      </div>
+      <div class="akce-card akce-coming-soon"><span class="akce-date-badge">Speciální akce</span><h3>PŘIPRAVUJEME…</h3><p>Nové zážitky a společná setkání už vznikají. Brzy prozradím víc.</p></div>
     </div>
   </div>
 </section>
@@ -1770,7 +1781,10 @@
     <div class="nov-wide">
       <div class="nov-narrow" style="padding:0;text-align:center"><span class="nov-label">Praktické informace</span><h2 class="nov-title">Všechno, co potřebuješ <em>vědět</em></h2></div>
       <div class="nov-practical"><div class="nov-practical-card"><span>Kdy</span><strong>13.–15. 11. 2026</strong></div><div class="nov-practical-card"><span>Čas</span><strong>Pátek 16:00<br>– neděle 13:00</strong></div><div class="nov-practical-card"><span>Kde</span><strong>Organic Farm<br>Soběsuky</strong></div><div class="nov-practical-card"><span>Kapacita</span><strong>Omezena</strong></div></div>
-      <div class="nov-price-box"><span class="nov-label">🤎 Early Bird</span><div class="nov-price">7 400 Kč</div><p><strong>Zvýhodněná cena platí pouze do 30. 9. 2026.</strong> Poté bude cena retreatu navýšena.</p><p>Rezervační záloha hrazená předem činí <strong>polovinu ceny retreatu</strong>.</p></div>
+      <div class="nov-price-box">
+        <div class="nov-price">8 900 Kč</div>
+        <p>Rezervační záloha hrazená předem činí <strong>polovinu ceny retreatu</strong>.</p>
+      </div>
     </div>
   </section>
 
@@ -1844,17 +1858,17 @@
 <section style="background: var(--cream);">
 <div class="hero">
 <div class="hero-text">
-<p class="hero-eyebrow">Body Studio Plzeň · Podzim 2026</p>
-<div class="som-status-stamp">Kurz právě probíhá</div>
+<p class="hero-eyebrow">NA SVĚTĚ · Šumperk · neděle 17:00–18:00</p>
+<div class="som-status-stamp">Kurz právě probíhá · do 20. 12. 2026</div>
           <div class="som-status-box">
-            <p>Kurz právě probíhá, můžeš ale navštívit i jednotlivé lekce a vyzkoušet si somatickou jógu.</p>
-            <a class="btn-primary" href="https://luma.com/lekce-jogy?tag=regulace%20nervového%20systému" target="_blank" rel="noopener">Pro vyzkoušení klikni sem →</a>
+            <p>Aktuální kurz probíhá do 20. 12. 2026. Další kurz začíná 10. 1. 2027. Jednotlivé lekce můžeš navštívit pouze při volné kapacitě.</p>
+            <a class="btn-primary" href="https://joga.rezervace.online/cs/terms/" target="_blank" rel="noopener">Pro vyzkoušení klikni sem →</a>
           </div>
           <h1 class="hero-title">
         Kurz <em>somatické</em><br/>jógy
       </h1>
 <p class="hero-subtitle">
-        13 jemných setkání, která patří jen tobě. V prostoru, kde se tělo uvolní, hlava ztiší a ty si dovolíš sejít se sama se sebou tam, kde je ti vnitřně dobře.
+        15 jemných setkání, která patří jen tobě. V prostoru, kde se tělo uvolní, hlava ztiší a ty si dovolíš sejít se sama se sebou tam, kde je ti vnitřně dobře.
       </p>
 <a class="btn-primary" href="#rezervace">Rezervovat místo</a>
 </div>
@@ -1864,23 +1878,23 @@
 <h2 class="hero-card-title">Somatická jóga<br/>&amp; nervový systém</h2>
 <div class="info-row">
 <span class="info-key">Začátek</span>
-<span class="info-val">16. 9. 2026</span>
+<span class="info-val">10. 1. 2027</span>
 </div>
 <div class="info-row">
 <span class="info-key">Konec</span>
-<span class="info-val">9. 12. 2026</span>
+<span class="info-val">25. 4. 2027</span>
 </div>
 <div class="info-row">
 <span class="info-key">Kdy</span>
-<span class="info-val">každou středu 17:00–18:00</span>
+<span class="info-val">každou neděli 17:00–18:00</span>
 </div>
 <div class="info-row">
 <span class="info-key">Místo</span>
-<span class="info-val">Body Studio Plzeň,<br/>Terezie Brzkové 1037/27</span>
+<span class="info-val">NA SVĚTĚ, Šumperk<br/>Slovanská 275/16, 787 01 Šumperk</span>
 </div>
 <div class="info-row">
 <span class="info-key">Počet lekcí</span>
-<span class="info-val">13 lekcí</span>
+<span class="info-val">15 lekcí</span>
 </div>
 <div class="hero-card-cta">
 <a class="btn-primary" href="#rezervace">Mám zájem</a>
@@ -2074,37 +2088,40 @@
 <section id="harmonogram" style="background: var(--cream);">
 <div class="section-narrow">
 <p class="section-label" style="justify-content:center;">Harmonogram kurzu</p>
-<h2 class="section-title" style="text-align:center;">13 středečních <em>setkání</em></h2>
-<p class="section-lead" style="text-align:center;">Každou středu od 17:00 do 18:00 v Body Studiu Plzeň. Stačí přijít — o zbytek se postarám.</p>
+<h2 class="section-title" style="text-align:center;">15 nedělních <em>setkání</em></h2>
+<p class="section-lead" style="text-align:center;">Každou neděli od 17:00 do 18:00 v prostoru NA SVĚTĚ v Šumperku. Stačí přijít — o zbytek se postarám.</p>
 <div class="schedule-box">
 <div class="schedule-header">
 <div class="schedule-detail">
-<strong>Kde:</strong> Body Studio Plzeň<br/>
-          Terezie Brzkové 1037/27, Skvrňany<br/>
-<strong>Kdy:</strong> každá středa, 17:00–18:00<br/>
+<strong>Kde:</strong> NA SVĚTĚ<br/>
+          Slovanská 275/16, 787 01 Šumperk<br/>
+<strong>Kdy:</strong> každou neděli, 17:00–18:00<br/>
 <strong>Délka lekce:</strong> 60 minut
         </div>
 <div class="schedule-detail" style="text-align:right;">
-<strong>Start:</strong> 16. 9. 2026<br/>
-<strong>Konec:</strong> 9. 12. 2026<br/>
-<strong>Celkem:</strong> 13 lekcí
+<strong>Start:</strong> 10. 1. 2027<br/>
+<strong>Konec:</strong> 25. 4. 2027<br/>
+<strong>Celkem:</strong> 15 lekcí
         </div>
 </div>
 <ul class="lesson-list">
-<li><span class="lesson-date">16. 9. 2026</span><span class="lesson-num">01</span></li>
-<li><span class="lesson-date">23. 9. 2026</span><span class="lesson-num">02</span></li>
-<li><span class="lesson-date">30. 9. 2026</span><span class="lesson-num">03</span></li>
-<li><span class="lesson-date">7. 10. 2026</span><span class="lesson-num">04</span></li>
-<li><span class="lesson-date">14. 10. 2026</span><span class="lesson-num">05</span></li>
-<li><span class="lesson-date">21. 10. 2026</span><span class="lesson-num">06</span></li>
-<li><span class="lesson-date">28. 10. 2026</span><span class="lesson-num">07</span></li>
-<li><span class="lesson-date">4. 11. 2026</span><span class="lesson-num">08</span></li>
-<li><span class="lesson-date">11. 11. 2026</span><span class="lesson-num">09</span></li>
-<li><span class="lesson-date">18. 11. 2026</span><span class="lesson-num">10</span></li>
-<li><span class="lesson-date">25. 11. 2026</span><span class="lesson-num">11</span></li>
-<li><span class="lesson-date">2. 12. 2026</span><span class="lesson-num">12</span></li>
-<li><span class="lesson-date">9. 12. 2026</span><span class="lesson-num">13</span></li>
+<li><span class="lesson-date">10. 1. 2027</span><span class="lesson-num">01</span></li>
+<li><span class="lesson-date">17. 1. 2027</span><span class="lesson-num">02</span></li>
+<li><span class="lesson-date">24. 1. 2027</span><span class="lesson-num">03</span></li>
+<li><span class="lesson-date">31. 1. 2027</span><span class="lesson-num">04</span></li>
+<li><span class="lesson-date">7. 2. 2027</span><span class="lesson-num">05</span></li>
+<li><span class="lesson-date">14. 2. 2027</span><span class="lesson-num">06</span></li>
+<li><span class="lesson-date">21. 2. 2027</span><span class="lesson-num">07</span></li>
+<li><span class="lesson-date">28. 2. 2027</span><span class="lesson-num">08</span></li>
+<li><span class="lesson-date">7. 3. 2027</span><span class="lesson-num">09</span></li>
+<li><span class="lesson-date">14. 3. 2027</span><span class="lesson-num">10</span></li>
+<li><span class="lesson-date">21. 3. 2027</span><span class="lesson-num">11</span></li>
+<li><span class="lesson-date">4. 4. 2027</span><span class="lesson-num">12</span></li>
+<li><span class="lesson-date">11. 4. 2027</span><span class="lesson-num">13</span></li>
+<li><span class="lesson-date">18. 4. 2027</span><span class="lesson-num">14</span></li>
+<li><span class="lesson-date">25. 4. 2027</span><span class="lesson-num">15</span></li>
 </ul>
+<p class="som-schedule-note">28. 3. 2027 se necvičí.</p>
 </div>
 </div>
 </section>
@@ -2120,48 +2137,8 @@
       </p>
 </div>
 <div class="pricing-cards">
-<div class="pricing-card featured">
-<div class="featured-badge">Doporučeno</div>
-<p class="pricing-type">Early Bird cena</p>
-<div class="pricing-amount"><span>Kč </span>2 860</div>
-<p class="pricing-sub">za celý kurz · 13 lekcí</p>
-<div class="pricing-deadline">Platí do 31. 8. 2026</div>
-<ul class="pricing-features">
-<li>13 lekcí somatické jógy</li>
-<li>Všechny terapeutické techniky</li>
-<li>Regulace nervového systému</li>
-<li>Mindfulness &amp; vizualizace</li>
-<li>Muziko &amp; aromaterapie</li>
-<li>220 Kč / lekce</li>
-</ul>
-</div>
-<div class="pricing-card">
-<p class="pricing-type">Standardní cena</p>
-<div class="pricing-amount"><span>Kč </span>3 250</div>
-<p class="pricing-sub">za celý kurz · 13 lekcí</p>
-<div class="pricing-deadline" style="background: var(--cream); color: var(--text-muted);">Od 1. 9. 2026</div>
-<ul class="pricing-features">
-<li>13 lekcí somatické jógy</li>
-<li>Všechny terapeutické techniky</li>
-<li>Regulace nervového systému</li>
-<li>Mindfulness &amp; vizualizace</li>
-<li>Muziko &amp; aromaterapie</li>
-<li>250 Kč / lekce</li>
-</ul>
-</div>
-<div class="pricing-card">
-<p class="pricing-type">Jednorázová lekce</p>
-<div class="pricing-amount"><span>Kč </span>280</div>
-<p class="pricing-sub">za jednu lekci</p>
-<div class="pricing-deadline" style="background: var(--cream); color: var(--text-muted);">Kdykoli v průběhu kurzu</div>
-<ul class="pricing-features">
-<li>1 lekce somatické jógy</li>
-<li>Vyzkoušení bez závazku</li>
-<li>Ideální jako první zkušenost</li>
-<li>Na základě dostupnosti</li>
-<li>Rezervace předem nutná</li>
-</ul>
-</div>
+<div class="pricing-card featured"><div class="featured-badge">Celý kurz</div><p class="pricing-type">15 lekcí somatické jógy</p><div class="pricing-amount"><span>Kč </span>2 775</div><p class="pricing-sub">10. 1.–25. 4. 2027 · 15 nedělí · 185 Kč / lekce</p><div class="pricing-deadline">28. 3. 2027 se necvičí</div><ul class="pricing-features"><li>15 jemných setkání po 60 minutách</li><li>Somatická jóga a práce s nervovým systémem</li><li>Vědomý pohyb, dech a hlubší uvolnění</li><li>Počet míst je omezený</li></ul></div>
+<div class="pricing-card"><p class="pricing-type">Jednorázová lekce</p><div class="pricing-amount"><span>Kč </span>200</div><p class="pricing-sub">za 60min lekci</p><div class="pricing-deadline">Pouze pokud není kurz naplněný</div><ul class="pricing-features"><li>Jedna lekce somatické jógy</li><li>Účast podle aktuální dostupnosti</li><li>Rezervace předem nutná</li></ul><a class="btn-primary" href="https://joga.rezervace.online/cs/terms/" target="_blank" rel="noopener noreferrer">Rezervovat volné místo →</a></div>
 </div>
 <p style="text-align:center; color:var(--text-muted); font-size:0.82rem; margin-top:2rem;">
       Platba převodem na základě zaslaných údajů.
@@ -2212,7 +2189,7 @@
 <p class="section-label" style="justify-content:center;">Rezervace místa</p>
 <h2 class="section-title" style="text-align:center;">Přihlas se <em>na kurz</em></h2>
 <p class="section-lead" style="text-align:center;">
-      Počet míst je omezený, aby každá lekce mohla být osobní a bezpečná. Přihlas se a rezervuj si místo — ozvu se ti do 48 hodin s potvrzením a platebními údaji.
+      Počet míst je omezený, aby každá lekce mohla být osobní a bezpečná. Přihlas se a zjisti dostupnost místa v kurzu. Jednorázová návštěva je možná pouze při volné kapacitě.
     </p>
 <div class="booking-wrap">
 <!-- SmartEmailing formulář -->
@@ -2237,51 +2214,36 @@
   <div class="ns-content">
     <section class="ns-hero">
       <div>
-        <p class="ns-eyebrow">8 setkání · Plzeň · kapacita 8 lidí</p>
+        <p class="ns-eyebrow">8 setkání · 14 hodin společné praxe · Šumperk · omezená kapacita</p>
         <h1 class="ns-title">Poznejte svůj <em>nervový systém</em></h1>
         <p class="ns-lead">Vaše cesta ke klidnějšímu já začíná uvnitř.</p>
-        <p class="ns-lead">Porozumějte svému nervovému systému a během 8 setkání se naučte, jak s ním spolupracovat ve svůj prospěch. Získejte větší klid, psychickou odolnost a jistotu v tom, co se ve vás děje – i v náročných situacích.</p>
+        <p class="ns-lead">Porozumějte svému nervovému systému a během 8 setkání (celkem 14 hodin) se naučte, jak s ním spolupracovat ve svůj prospěch. Získejte větší klid, psychickou odolnost a jistotu v tom, co se ve vás děje – i v náročných situacích.</p>
         <p class="ns-lead">Kurz pro všechny, kteří chtějí lépe rozumět svému tělu, stresu, emocím i vlastním reakcím. Bez složité teorie a zbytečného zahlcení – zato srozumitelně, prakticky a s nástroji, které využijete v práci, doma i ve vztazích.</p>
         <div class="ns-actions">
           <a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a>
           <a class="ns-btn ns-btn-out" href="#ns-faq">Často kladené otázky</a>
         </div>
         <div class="ns-outside-plzen">
-          <p><strong>Nejste z Plzně a přesto vás téma zajímá?</strong></p>
+          <p><strong>Nejsem ze Šumperka – a přesto mě téma zajímá</strong></p>
           <a class="ns-btn ns-btn-out" href="#ns-dotaznik">Klikněte prosím sem ↓</a>
         </div>
       </div>
       <aside class="ns-card">
         <p class="ns-label">Informace o kurzu</p>
         <h2 class="ns-card-title">Nervový systém – kurz</h2>
-        <div class="ns-dates-grid" aria-label="Termíny kurzu">
-          <div class="ns-date-chip">19. 1.</div>
-          <div class="ns-date-chip">26. 1.</div>
-          <div class="ns-date-chip">2. 2.</div>
-          <div class="ns-date-chip">9. 2.</div>
-          <div class="ns-date-chip">16. 2.</div>
-          <div class="ns-date-chip">23. 2.</div>
-          <div class="ns-date-chip">2. 3.</div>
-          <div class="ns-date-chip">9. 3.</div>
-        </div>
-        <div class="ns-info-row"><span>Začátek</span><strong>leden 2027</strong></div>
-        <div class="ns-info-row"><span>Kdy</span><strong>úterky<br>17:20–18:50</strong></div>
-        <div class="ns-info-row"><span>Místo</span><strong>Jogáza<br>Kollárova 22, Plzeň, 301 00</strong></div>
-        <div class="ns-info-row"><span>Kapacita</span><strong>8 lidí</strong></div>
-        <div class="ns-info-row"><span>Termíny</span><strong>19. 1., 26. 1., 2. 2., 9. 2.,<br>16. 2., 23. 2., 2. 3., 9. 3.</strong></div>
-        <div class="ns-info-row"><span>Pomůcky</span><strong>podložky zajištěny</strong></div>
-        <div class="ns-info-row"><span>Navíc</span><strong>materiály, drobné občerstvení</strong></div>
+        <div class="ns-dates-grid" aria-label="Organizace kurzu"><div class="ns-date-chip">8 setkání</div><div class="ns-date-chip">105 min / lekce</div><div class="ns-date-chip">14 hodin celkem</div></div>
+        <div class="ns-info-row"><span>Nejbližší začátek</span><strong>12. 1. 2027</strong></div>
+        <div class="ns-info-row"><span>Kdy</span><strong>úterky<br>17:15–19:00 (105 minut)</strong></div>
+        <div class="ns-info-row"><span>Místo</span><strong>Šumperk<br>přesné místo upřesníme</strong></div>
+        <div class="ns-info-row"><span>Kapacita</span><strong>omezená</strong></div>
+        <div class="ns-info-row"><span>Rozsah</span><strong>8 × 1 hodina 45 minut = 14 hodin</strong></div>
+        <div class="ns-info-row"><span>Pomůcky</span><strong>všechny potřebné pomůcky k dispozici</strong></div>\n<div class="ns-term-runs" aria-label="Vypsané termíny kurzu nervového systému"><div class="ns-term-run"><h3>1. běh · 12. 1. 2027 – 2. 3. 2027</h3><p>Úterky · 17:15–19:00 · 8 setkání (14 hodin)</p><div class="ns-term-dates"><span>12. 1.</span><span>19. 1.</span><span>26. 1.</span><span>2. 2.</span><span>9. 2.</span><span>16. 2.</span><span>23. 2.</span><span>2. 3.</span></div></div><div class="ns-term-run"><h3>2. běh · 23. 3. 2027 – 11. 5. 2027</h3><p>Úterky · 17:15–19:00 · 8 setkání (14 hodin)</p><div class="ns-term-dates"><span>23. 3.</span><span>30. 3.</span><span>6. 4.</span><span>13. 4.</span><span>20. 4.</span><span>27. 4.</span><span>4. 5.</span><span>11. 5.</span></div></div><div class="ns-term-run"><h3>3. běh · 5. 10. 2027 – 23. 11. 2027</h3><p>Úterky · 17:15–19:00 · 8 setkání (14 hodin)</p><div class="ns-term-dates"><span>5. 10.</span><span>12. 10.</span><span>19. 10.</span><span>26. 10.</span><span>2. 11.</span><span>9. 11.</span><span>16. 11.</span><span>23. 11.</span></div></div></div>
+        <div class="ns-info-row"><span>Navíc</span><strong>materiály k procvičování, drobné občerstvení</strong></div>
       </aside>
     </section>
 
     <section class="ns-section" style="padding-top:12px">
-      <div class="ns-waitlist-card">
-        <span class="ns-waitlist-badge">Early bird pro čekací listinu</span>
-        <h2>Chcete nejvýhodnější cenu?</h2>
-        <p>Pokud se přidáte na čekací listinu <strong>do 30. 11. 2026</strong>, můžete získat celý kurz za <strong>3 999 Kč</strong>.</p>
-        <p>Od 1. 12. 2026 bude cena kurzu <strong>4 999 Kč</strong>.</p>
-        <a class="ns-btn" href="#ns-rezervace">Chci cenu 3 999 Kč</a>
-      </div>
+      <div class="ns-waitlist-card"><span class="ns-waitlist-badge">8 setkání · 14 hodin</span><h2>Čas a prostor pro skutečnou změnu</h2><p>Osm setkání po <strong>105 minutách</strong>. Srozumitelná teorie, praktická cvičení, prostor na otázky a zkušenost, kterou si odnesete i do běžného života.</p><p>Pomůcky, podpůrné materiály a drobné občerstvení jsou v ceně.</p><a class="ns-btn" href="#ns-rezervace">Mám zájem o kurz</a></div>
     </section>
 
     <section class="ns-section ns-white">
@@ -2319,13 +2281,7 @@
 
     <section class="ns-section ns-white" style="padding-top:18px;padding-bottom:18px">
       <div class="ns-inner">
-        <div class="ns-waitlist-card">
-          <span class="ns-waitlist-badge">Pouze 8 míst</span>
-          <h2>Čekací listina = výhodnější cena</h2>
-          <p>Přidejte se na čekací listinu <strong>do 30. listopadu 2026</strong> a získáte možnost přihlásit se za <strong>3 999 Kč</strong>.</p>
-          <p>Poté bude cena <strong>4 999 Kč</strong>. Díky malé kapacitě doporučuji nenechávat rozhodnutí na poslední chvíli.</p>
-          <a class="ns-btn" href="#ns-rezervace">Přidat se na čekací listinu</a>
-        </div>
+        <div class="ns-waitlist-card"><span class="ns-waitlist-badge">V ceně kurzu</span><h2>14 hodin společné praxe</h2><p>Osm delších setkání v menší skupině. Praktická práce s nervovým systémem, všechny pomůcky na místě, materiály pro vlastní praxi a drobné občerstvení.</p><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
       </div>
     </section>
 
@@ -2425,61 +2381,12 @@
           <h2 class="ns-section-title">Co si z kurzu skutečně <em>odnesete</em></h2>
           <p class="ns-text" style="margin:0 auto;max-width:720px;color:var(--ns-text-soft)"><strong>Nejen nové informace, ale především schopnost lépe rozumět sobě.</strong></p>
           <p class="ns-text" style="margin:12px auto 0;max-width:760px;color:var(--ns-text-soft)">Kurz je postavený na praktické zkušenosti. Každé setkání propojuje porozumění nervovému systému s konkrétními technikami, které můžete využívat doma, v práci i ve vztazích.</p>
-          <div class="ns-registration-alert">
-            <p><strong>EARLY BIRD:</strong> pokud se přidáte na čekací listinu do 30. 11. 2026, cena je 3 999 Kč.</p>
-            <p style="margin-top:10px"><strong>Od 1. 12. 2026:</strong> cena kurzu je 4 999 Kč.</p>
-          </div>
+          <div class="ns-registration-alert"><p><strong>Kompletní kurz: 4 999 Kč.</strong> Cena zahrnuje 8 setkání po 105 minutách, tedy celkem 14 hodin, všechny potřebné pomůcky, materiály i drobné občerstvení.</p></div>
           <p class="ns-pricing-note"><strong>Kapacita je 8 účastníků,</strong> aby byl zachován bezpečný prostor a možnost individuálního přístupu.</p>
         </div>
-        <div class="ns-pricing-cards">
-          <div class="ns-pricing-card featured">
-            <div class="ns-featured-badge">EARLY BIRD</div>
-            <p class="ns-pricing-type">Pro členy čekací listiny</p>
-            <div class="ns-pricing-amount"><span>Kč </span>3 999</div>
-            <p class="ns-pricing-sub">za celý kurz · 8 setkání</p>
-            <div class="ns-pricing-deadline">Přidejte se na čekací listinu do 30. 11. 2026</div>
-            <ul class="ns-pricing-features">
-              <li>8 navazujících setkání</li>
-              <li>Praktická práce s nervovým systémem</li>
-              <li>Polyvagální přístup v praxi</li>
-              <li>Regulace nervového systému</li>
-              <li>Mindfulness, interocepce a práce s tělem</li>
-              <li>Materiály pro samostudium</li>
-              <li>Všechny pomůcky a drobné občerstvení</li>
-            </ul>
-          </div>
-          <div class="ns-pricing-card">
-            <p class="ns-pricing-type">Standardní cena</p>
-            <div class="ns-pricing-amount"><span>Kč </span>4 999</div>
-            <p class="ns-pricing-sub">za celý kurz · 8 setkání</p>
-            <div class="ns-pricing-deadline" style="background:var(--ns-cream);color:var(--ns-text-muted)">Od 1. 12. 2026</div>
-            <ul class="ns-pricing-features">
-              <li>8 navazujících setkání</li>
-              <li>Praktická práce s nervovým systémem</li>
-              <li>Polyvagální přístup v praxi</li>
-              <li>Regulace nervového systému</li>
-              <li>Mindfulness, interocepce a práce s tělem</li>
-              <li>Materiály pro samostudium</li>
-              <li>Všechny pomůcky a drobné občerstvení</li>
-            </ul>
-          </div>
-          <div class="ns-pricing-card" style="grid-column:1/-1;max-width:560px;width:100%;margin:0 auto">
-            <p class="ns-pricing-type">Jednorázová lekce</p>
-            <div class="ns-pricing-amount"><span>Kč </span>625</div>
-            <p class="ns-pricing-sub">za jednu 90min lekci</p>
-            <div class="ns-pricing-deadline" style="background:var(--ns-cream);color:var(--ns-text-muted)">Pouze podle aktuální dostupnosti místa</div>
-            <ul class="ns-pricing-features">
-              <li>Jedna 90min lekce</li>
-              <li>Vyzkoušení kurzu bez závazku</li>
-              <li>Praktická práce s nervovým systémem</li>
-              <li>Rezervace předem nutná</li>
-            </ul>
-            <div class="ns-card-action">
-              <a class="ns-btn" href="https://joga.rezervace.online/cs/view/kurz-nervovy-system-r49986/2026-07-07;viewMode=day" target="_blank" rel="noopener">Rezervovat jednorázovou lekci</a>
-            </div>
-          </div>
-        </div>
-        <div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
+        <div class="ns-pricing-cards" style="grid-template-columns:minmax(0,690px);justify-content:center">
+<div class="ns-pricing-card featured"><div class="ns-featured-badge">Kompletní vzdělávací a sebezkušenostní kurz</div><p class="ns-pricing-type">Jedna cena za celý kurz</p><div class="ns-pricing-amount"><span>Kč </span>4 999</div><p class="ns-pricing-sub">8 setkání × 1 hodina 45 minut · <strong>celkem 14 hodin</strong> společné praxe</p><ul class="ns-pricing-features"><li>8 navazujících setkání po 105 minutách</li><li>14 hodin bezpečného prostoru pro porozumění i praktickou zkušenost</li><li>Polyvagální přístup a konkrétní nástroje regulace nervového systému</li><li>Práce s tělem, dechem, interocepcí a mindfulness</li><li>Prostor pro otázky, reflexi a integraci do každodennosti</li><li>Všechny potřebné pomůcky na místě k dispozici</li><li>Podpůrné materiály pro vlastní praxi</li><li>Drobné občerstvení v průběhu setkání</li><li>Omezený počet míst a osobní přístup</li></ul><div class="ns-card-action"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div></div></div>
+<div class="ns-mini-cta"><a class="ns-btn" href="#ns-rezervace">Zapsat se na čekací listinu</a></div>
       </div>
     </section>
 
@@ -2553,7 +2460,7 @@
         <details><summary>Co když jsem už absolvoval(a) kurzy osobního rozvoje?</summary><p>I pro vás může být kurz přínosný. Získáte hlubší porozumění tomu, jak funguje váš nervový systém, a díky tomu budete umět jednotlivé techniky využívat vědoměji.</p></details>
         <details><summary>Pomůže mi kurz zbavit se stresu?</summary><p>Stres je přirozenou součástí života a cílem kurzu není ho odstranit. Naučíte se ale lépe rozpoznávat, co se ve vašem těle děje, a získáte nástroje, které vám pomohou reagovat s větším klidem, flexibilitou a nadhledem.</p></details>
         <details><summary>Je kurz vhodný, pokud procházím náročným obdobím?</summary><p>Záleží na vaší aktuální situaci. Kurz není psychoterapií ani nenahrazuje odbornou péči. Pokud procházíte akutní krizí nebo řešíte závažné psychické obtíže, doporučujeme konzultovat vhodnost účasti se svým terapeutem nebo lékařem.</p></details>
-        <details><summary>Kolik času mi kurz zabere?</summary><p>Kurz je navržen tak, aby jej bylo možné zvládat i při práci nebo péči o rodinu. Setkání probíhají v úterý od 17:20 do 18:50 v termínech 19. 1., 26. 1., 2. 2., 9. 2., 16. 2., 23. 2., 2. 3. a 9. 3. 2027.</p></details>
+        <details><summary>Kolik času mi kurz zabere?</summary><p>Čeká vás osm středečních setkání od 17:15 do 19:00 (105 minut), celkem 14 hodin společného času. První běh začíná 12. 1. 2027, druhý 23. 3. 2027 a třetí 5. 10. 2027. Všechna setkání probíhají v úterý.</p></details>
         <details><summary>Je kurz vhodný i pro pomáhající profese?</summary><p>Ano. Kurz je přínosný pro psychology, kouče, terapeuty, pedagogy, sociální pracovníky i další pomáhající profese.</p></details>
         <details><summary>Co si z kurzu odnesu?</summary><p>Především větší porozumění sobě. Naučíte se rozpoznávat stavy svého nervového systému, pracovat se stresem a emocemi, vnímat signály svého těla a používat jednoduché techniky pro každodenní situace.</p></details>
       </div>
@@ -2564,7 +2471,7 @@
       <div class="ns-survey-card">
         <div class="ns-survey-head">
           <p class="ns-label" style="justify-content:center">Nejste z Plzně?</p>
-          <h2>Zajímá vás téma nervového systému i mimo Plzeň?</h2>
+          <h2>Zajímá vás téma nervového systému i mimo Šumperk?</h2>
           <p>Vyplňte krátký dotazník. Pomůže mi zjistit, kde a v jaké podobě je o podobný kurz zájem.</p>
         </div>
 
